@@ -8,6 +8,75 @@ export interface ServiceDetail {
     headline: string;
     description: string;
   };
+  framework?: {
+    title: string;
+    description: string;
+    pillars: Array<{
+      icon: string;
+      title: string;
+      description: string;
+      features: string[];
+    }>;
+  };
+  whyBusinessesChoose?: {
+    stats: Array<{
+      value: string;
+      label: string;
+      icon: string;
+    }>;
+    reasons: Array<{
+      title: string;
+      description: string;
+      icon: string;
+    }>;
+  };
+  hireSpecialist?: {
+    tagline: string;
+    benefits: string[];
+    cta: string;
+  };
+  howItWorks?: {
+    timeline: Array<{
+      week: string;
+      title: string;
+      description: string;
+      deliverables: string[];
+      icon: string;
+    }>;
+  };
+  comprehensiveServices?: {
+    introduction: string;
+    serviceCategories: Array<{
+      category: string;
+      services: Array<{
+        name: string;
+        description: string;
+        icon: string;
+      }>;
+    }>;
+  };
+  whyMatters?: {
+    impact: string;
+    statistics: Array<{
+      stat: string;
+      description: string;
+    }>;
+    consequences: Array<{
+      title: string;
+      description: string;
+      icon: string;
+    }>;
+  };
+  transformProcess?: {
+    subtitle: string;
+    phases: Array<{
+      phase: string;
+      title: string;
+      description: string;
+      outcomes: string[];
+      icon: string;
+    }>;
+  };
   definition: {
     what: string;
     why: string;
@@ -36,6 +105,14 @@ export interface ServiceDetail {
     title: string;
     description: string;
   }>;
+  countriesServed?: {
+    description: string;
+    regions: Array<{
+      region: string;
+      countries: string[];
+      highlight: boolean;
+    }>;
+  };
   faqs: Array<{
     question: string;
     answer: string;
@@ -53,6 +130,434 @@ export const servicesData: Record<string, ServiceDetail> = {
       badge: "SEO Services",
       headline: "Technical SEO Services That Fix Issues and Unlock Rankings",
       description: "Eliminate technical barriers holding your site back. From crawl errors to Core Web Vitals, I diagnose and fix the issues that prevent Google from ranking your pages."
+    },
+    framework: {
+      title: "My Technical SEO Framework",
+      description: "A systematic approach built on 4 core pillars that address every technical factor affecting your search visibility and user experience.",
+      pillars: [
+        {
+          icon: "Server",
+          title: "Crawl Optimization",
+          description: "Ensure search engines can efficiently discover and access all important pages on your site.",
+          features: [
+            "Robots.txt optimization and crawl budget management",
+            "XML sitemap structure and submission",
+            "Internal linking architecture",
+            "URL parameter handling and canonicalization"
+          ]
+        },
+        {
+          icon: "Database",
+          title: "Indexability & Structure",
+          description: "Control which pages get indexed and how search engines understand your site hierarchy.",
+          features: [
+            "Meta robots and X-Robots-Tag configuration",
+            "Structured data implementation (Schema.org)",
+            "Site architecture and information hierarchy",
+            "Duplicate content resolution"
+          ]
+        },
+        {
+          icon: "Zap",
+          title: "Performance Optimization",
+          description: "Deliver lightning-fast page speeds that satisfy both users and search algorithms.",
+          features: [
+            "Core Web Vitals optimization (LCP, FID, CLS)",
+            "Image optimization and lazy loading",
+            "JavaScript and CSS minification",
+            "Server response time and caching strategies"
+          ]
+        },
+        {
+          icon: "Shield",
+          title: "Technical Health",
+          description: "Maintain a secure, mobile-friendly, and error-free technical foundation.",
+          features: [
+            "HTTPS implementation and security headers",
+            "Mobile-first optimization and responsive design",
+            "404 error resolution and redirect management",
+            "Hreflang and international SEO setup"
+          ]
+        }
+      ]
+    },
+    whyBusinessesChoose: {
+      stats: [
+        {
+          value: "500+",
+          label: "Sites Optimized",
+          icon: "TrendingUp"
+        },
+        {
+          value: "94%",
+          label: "Average Core Web Vitals Score",
+          icon: "Zap"
+        },
+        {
+          value: "67%",
+          label: "Average Indexation Improvement",
+          icon: "Database"
+        },
+        {
+          value: "2.4s",
+          label: "Average Load Time Reduction",
+          icon: "Clock"
+        }
+      ],
+      reasons: [
+        {
+          title: "Deep Technical Expertise",
+          description: "15+ years working with complex enterprise sites, custom CMS platforms, and everything in between. I've diagnosed and fixed thousands of technical issues across every platform.",
+          icon: "Code"
+        },
+        {
+          title: "Crawl Budget Mastery",
+          description: "Specialized expertise in crawl optimization for large sites. I ensure search engines focus on your most important pages, not wasting resources on duplicate or low-value content.",
+          icon: "Server"
+        },
+        {
+          title: "Performance-First Approach",
+          description: "Core Web Vitals aren't just checkboxes—they're user experience factors that directly impact rankings. I optimize for real-world performance, not just test scores.",
+          icon: "Gauge"
+        },
+        {
+          title: "Platform-Agnostic Solutions",
+          description: "From WordPress to custom-built platforms, I implement technical SEO solutions that work within your tech stack's constraints while maximizing search visibility.",
+          icon: "Layers"
+        }
+      ]
+    },
+    hireSpecialist: {
+      tagline: "Ready to fix what's holding your site back?",
+      benefits: [
+        "Get a comprehensive technical audit revealing every issue blocking your rankings",
+        "Receive a prioritized roadmap with impact scores for each technical fix",
+        "Stop losing rankings to preventable technical problems",
+        "Ensure every page you publish is crawlable, indexable, and optimized"
+      ],
+      cta: "Get Your Technical SEO Audit"
+    },
+    howItWorks: {
+      timeline: [
+        {
+          week: "Week 1",
+          title: "Comprehensive Technical Audit",
+          description: "Complete technical analysis using Screaming Frog, Google Search Console, Core Web Vitals data, and server log analysis. Identify every technical issue affecting SEO performance.",
+          deliverables: [
+            "Technical SEO audit report with prioritized issues",
+            "Core Web Vitals assessment and improvement plan",
+            "Crawl budget analysis and optimization recommendations",
+            "Indexation audit identifying blocked or missing pages"
+          ],
+          icon: "Search"
+        },
+        {
+          week: "Week 2",
+          title: "Critical Issues Resolution",
+          description: "Fix high-impact technical issues first: crawl errors, indexation problems, critical performance issues, and mobile usability problems preventing proper ranking.",
+          deliverables: [
+            "Resolved crawl errors and access issues",
+            "Corrected robots.txt and meta robots directives",
+            "Fixed critical site speed and Core Web Vitals issues",
+            "Implemented proper canonicalization"
+          ],
+          icon: "Wrench"
+        },
+        {
+          week: "Week 3",
+          title: "Performance Optimization",
+          description: "Deep dive into site speed, Core Web Vitals, and user experience metrics. Optimize images, implement efficient caching, reduce JavaScript bloat, and improve server response times.",
+          deliverables: [
+            "Optimized Core Web Vitals scores (LCP, FID, CLS)",
+            "Implemented lazy loading and efficient resource delivery",
+            "Reduced page weight and load times by 40-60%",
+            "Mobile performance optimization"
+          ],
+          icon: "Zap"
+        },
+        {
+          week: "Week 4",
+          title: "Structured Data Implementation",
+          description: "Deploy Schema markup for enhanced search appearances. Implement organization, product, article, FAQ, and other relevant schema types to help search engines understand your content.",
+          deliverables: [
+            "Comprehensive Schema.org markup implementation",
+            "Rich snippet optimization for key page types",
+            "Knowledge Graph entity optimization",
+            "Schema validation and testing"
+          ],
+          icon: "FileCode"
+        },
+        {
+          week: "Week 5",
+          title: "Site Architecture Enhancement",
+          description: "Optimize internal linking, URL structure, and site hierarchy. Improve crawl efficiency, distribute link equity effectively, and enhance topical relevance through strategic architecture.",
+          deliverables: [
+            "Optimized internal linking structure",
+            "URL structure recommendations and implementation",
+            "Enhanced XML sitemap hierarchy",
+            "Improved site navigation and information architecture"
+          ],
+          icon: "Network"
+        },
+        {
+          week: "Week 6",
+          title: "Monitoring & Documentation",
+          description: "Set up ongoing technical health monitoring, document all changes, establish maintenance protocols, and provide training on maintaining technical SEO standards.",
+          deliverables: [
+            "Technical SEO monitoring dashboard setup",
+            "Complete documentation of all fixes and changes",
+            "Maintenance checklist and protocols",
+            "Training session on technical SEO best practices"
+          ],
+          icon: "Monitor"
+        }
+      ]
+    },
+    comprehensiveServices: {
+      introduction: "Everything you need to build and maintain a technically sound, search-friendly website that delivers exceptional performance.",
+      serviceCategories: [
+        {
+          category: "Site Performance",
+          services: [
+            {
+              name: "Core Web Vitals Optimization",
+              description: "Optimize LCP, FID, and CLS scores for better rankings and user experience",
+              icon: "Zap"
+            },
+            {
+              name: "Page Speed Optimization",
+              description: "Reduce load times through efficient resource delivery and caching strategies",
+              icon: "Gauge"
+            },
+            {
+              name: "Mobile Performance",
+              description: "Optimize for mobile-first indexing with responsive design and efficient mobile delivery",
+              icon: "Smartphone"
+            },
+            {
+              name: "Image Optimization",
+              description: "Implement WebP, lazy loading, and proper sizing for faster page loads",
+              icon: "Image"
+            }
+          ]
+        },
+        {
+          category: "Crawl & Index Management",
+          services: [
+            {
+              name: "Crawl Budget Optimization",
+              description: "Ensure search engines crawl your most important pages efficiently",
+              icon: "Server"
+            },
+            {
+              name: "XML Sitemap Optimization",
+              description: "Structure and submit optimized sitemaps for better discovery",
+              icon: "FileText"
+            },
+            {
+              name: "Robots.txt Configuration",
+              description: "Control crawler access and prevent indexation of sensitive content",
+              icon: "Shield"
+            },
+            {
+              name: "Indexation Management",
+              description: "Ensure proper indexing of important pages while blocking thin content",
+              icon: "Database"
+            }
+          ]
+        },
+        {
+          category: "Technical Infrastructure",
+          services: [
+            {
+              name: "HTTPS & Security",
+              description: "Implement SSL certificates, security headers, and secure protocols",
+              icon: "Lock"
+            },
+            {
+              name: "Structured Data Markup",
+              description: "Deploy Schema.org markup for rich snippets and enhanced search appearance",
+              icon: "FileCode"
+            },
+            {
+              name: "Hreflang Implementation",
+              description: "Configure international targeting for multi-language or multi-region sites",
+              icon: "Globe"
+            },
+            {
+              name: "Canonical URL Management",
+              description: "Prevent duplicate content issues with proper canonicalization",
+              icon: "Link"
+            }
+          ]
+        },
+        {
+          category: "Error Resolution",
+          services: [
+            {
+              name: "404 Error Fixing",
+              description: "Identify and resolve broken links damaging user experience and SEO",
+              icon: "AlertCircle"
+            },
+            {
+              name: "Redirect Management",
+              description: "Implement proper 301 redirects and eliminate redirect chains",
+              icon: "ArrowRight"
+            },
+            {
+              name: "Broken Link Recovery",
+              description: "Fix internal and external broken links to preserve link equity",
+              icon: "Link2Off"
+            },
+            {
+              name: "Server Error Resolution",
+              description: "Diagnose and fix 5xx errors preventing search engine access",
+              icon: "ServerCrash"
+            }
+          ]
+        }
+      ]
+    },
+    whyMatters: {
+      impact: "Technical SEO is the foundation that determines whether search engines can even find, access, and rank your content. Without solid technical infrastructure, even the best content strategy fails. It's the difference between being invisible and dominating your market.",
+      statistics: [
+        {
+          stat: "53% of users abandon",
+          description: "sites taking more than 3 seconds to load—costing you rankings and revenue"
+        },
+        {
+          stat: "Mobile-first indexing means",
+          description: "Google primarily uses your mobile site for ranking—poor mobile performance = poor rankings"
+        },
+        {
+          stat: "Core Web Vitals are",
+          description: "confirmed ranking factors—slow sites get deprioritized in search results"
+        }
+      ],
+      consequences: [
+        {
+          title: "Lost Rankings",
+          description: "Technical issues like slow speeds, crawl errors, and poor mobile experience directly lower your search rankings—handing visibility to competitors.",
+          icon: "TrendingDown"
+        },
+        {
+          title: "Wasted Crawl Budget",
+          description: "Large sites with technical issues waste crawl budget on duplicate content and broken pages instead of important, revenue-generating content.",
+          icon: "Server"
+        },
+        {
+          title: "Blocked Revenue",
+          description: "If search engines can't crawl your product pages, service pages, or content, you're invisible to potential customers actively searching for what you offer.",
+          icon: "DollarSign"
+        },
+        {
+          title: "Poor User Experience",
+          description: "Technical problems create slow, broken, frustrating experiences that drive visitors away—damaging both conversions and SEO through poor engagement metrics.",
+          icon: "UserX"
+        }
+      ]
+    },
+    transformProcess: {
+      subtitle: "Our battle-tested 6-step process that takes sites from technically broken to search-engine optimized",
+      phases: [
+        {
+          phase: "Phase 1",
+          title: "Audit & Analysis",
+          description: "Comprehensive technical analysis using Screaming Frog, Google Search Console, PageSpeed Insights, and server log analysis. Identify every issue preventing optimal search performance.",
+          outcomes: [
+            "Complete technical audit report with prioritized issues",
+            "Core Web Vitals baseline and improvement roadmap",
+            "Crawl efficiency analysis and recommendations",
+            "Mobile usability assessment"
+          ],
+          icon: "FileSearch"
+        },
+        {
+          phase: "Phase 2",
+          title: "Critical Issue Resolution",
+          description: "Fix high-impact technical barriers first: crawl errors blocking indexation, severe performance issues, critical mobile problems, and security vulnerabilities.",
+          outcomes: [
+            "Resolved crawl errors and access issues",
+            "Fixed critical Core Web Vitals problems",
+            "Corrected indexation directives",
+            "Implemented proper HTTPS and security headers"
+          ],
+          icon: "AlertTriangle"
+        },
+        {
+          phase: "Phase 3",
+          title: "Performance Optimization",
+          description: "Deep optimization of site speed, Core Web Vitals, and resource delivery. Implement caching, image optimization, code minification, and efficient loading strategies.",
+          outcomes: [
+            "Optimized LCP, FID, and CLS scores",
+            "40-60% reduction in page load times",
+            "Implemented lazy loading and efficient resource delivery",
+            "Mobile performance optimization"
+          ],
+          icon: "Zap"
+        },
+        {
+          phase: "Phase 4",
+          title: "Structure & Markup",
+          description: "Optimize site architecture, implement structured data, and enhance crawl efficiency through strategic internal linking and sitemap optimization.",
+          outcomes: [
+            "Comprehensive Schema.org markup deployed",
+            "Optimized site architecture and URL structure",
+            "Enhanced XML sitemaps and robots.txt",
+            "Improved internal linking for crawl efficiency"
+          ],
+          icon: "Layout"
+        },
+        {
+          phase: "Phase 5",
+          title: "Index Management",
+          description: "Ensure proper indexation of important pages while blocking thin or duplicate content. Optimize crawl budget for large sites and resolve indexation issues.",
+          outcomes: [
+            "Proper canonicalization across all pages",
+            "Strategic noindex implementation for thin content",
+            "Optimized crawl budget allocation",
+            "Resolved duplicate content issues"
+          ],
+          icon: "Database"
+        },
+        {
+          phase: "Phase 6",
+          title: "Monitor & Maintain",
+          description: "Establish ongoing technical health monitoring, set up alerts for new issues, document all changes, and create maintenance protocols for long-term success.",
+          outcomes: [
+            "Technical SEO monitoring dashboard implemented",
+            "Automated alerts for technical issues",
+            "Complete documentation and maintenance guide",
+            "Quarterly technical health audits scheduled"
+          ],
+          icon: "Activity"
+        }
+      ]
+    },
+    countriesServed: {
+      description: "Providing technical SEO services globally to businesses of all sizes across major markets",
+      regions: [
+        {
+          region: "North America",
+          countries: ["United States", "Canada", "Mexico"],
+          highlight: true
+        },
+        {
+          region: "Europe",
+          countries: ["United Kingdom", "Germany", "France", "Spain", "Italy", "Netherlands", "Switzerland"],
+          highlight: true
+        },
+        {
+          region: "Asia Pacific",
+          countries: ["Australia", "Singapore", "India", "Japan", "New Zealand"],
+          highlight: false
+        },
+        {
+          region: "Middle East",
+          countries: ["United Arab Emirates", "Saudi Arabia", "Qatar"],
+          highlight: false
+        }
+      ]
     },
     definition: {
       what: "Technical SEO is the process of optimizing your website's infrastructure to help search engines crawl, index, and understand your content more effectively.",

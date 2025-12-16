@@ -3,6 +3,13 @@ import { notFound } from "next/navigation";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { servicesData, servicesList } from "@/data/servicesData";
 import ServiceHero from "@/components/service-detail/ServiceHero";
+import ServiceFramework from "@/components/service-detail/ServiceFramework";
+import WhyBusinessesChoose from "@/components/service-detail/WhyBusinessesChoose";
+import HireSpecialist from "@/components/service-detail/HireSpecialist";
+import HowItWorks from "@/components/service-detail/HowItWorks";
+import ComprehensiveServices from "@/components/service-detail/ComprehensiveServices";
+import WhyMatters from "@/components/service-detail/WhyMatters";
+import TransformProcess from "@/components/service-detail/TransformProcess";
 import ServiceDefinition from "@/components/service-detail/ServiceDefinition";
 import ServiceProblems from "@/components/service-detail/ServiceProblems";
 import ServiceProcess from "@/components/service-detail/ServiceProcess";
@@ -10,6 +17,7 @@ import ServiceDeliverables from "@/components/service-detail/ServiceDeliverables
 import ServiceIndustries from "@/components/service-detail/ServiceIndustries";
 import ServicePlatforms from "@/components/service-detail/ServicePlatforms";
 import ServiceWhyChoose from "@/components/service-detail/ServiceWhyChoose";
+import CountriesServed from "@/components/service-detail/CountriesServed";
 import ServiceAvailability from "@/components/service-detail/ServiceAvailability";
 import ServiceFAQs from "@/components/service-detail/ServiceFAQs";
 import ServiceCTA from "@/components/service-detail/ServiceCTA";
@@ -117,7 +125,31 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
+      {/* Premium Hero Section */}
       <ServiceHero service={service} />
+      
+      {/* My SEO Framework Section */}
+      {service.framework && <ServiceFramework service={service} />}
+      
+      {/* Why Top Businesses Choose Me Section */}
+      {service.whyBusinessesChoose && <WhyBusinessesChoose service={service} />}
+      
+      {/* Hire the Best Specialist Section */}
+      {service.hireSpecialist && <HireSpecialist service={service} />}
+      
+      {/* How It Works Section */}
+      {service.howItWorks && <HowItWorks service={service} />}
+      
+      {/* Comprehensive Services Section */}
+      {service.comprehensiveServices && <ComprehensiveServices service={service} />}
+      
+      {/* Why This SEO Matters Section */}
+      {service.whyMatters && <WhyMatters service={service} />}
+      
+      {/* How I Transform Your SEO - Timeline Process */}
+      {service.transformProcess && <TransformProcess service={service} />}
+      
+      {/* Service Details Sections */}
       <ServiceDefinition service={service} />
       <ServiceProblems service={service} />
       <ServiceProcess service={service} />
@@ -125,6 +157,11 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       <ServiceIndustries service={service} />
       {service.platforms && <ServicePlatforms service={service} />}
       <ServiceWhyChoose service={service} />
+      
+      {/* Countries Served Section */}
+      {service.countriesServed && <CountriesServed service={service} />}
+      
+      {/* Remaining Sections */}
       <ServiceAvailability />
       <ServiceFAQs service={service} />
       <ServiceCTA serviceName={service.name} />
