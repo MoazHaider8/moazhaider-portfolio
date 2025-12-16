@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ServiceDetail } from "@/data/servicesData";
+import * as Icons from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -48,7 +49,9 @@ export default function ServiceProblems({ service }: Props) {
           variants={staggerContainer}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {service.problems.map((problem, idx) => (
+          {service.problems.map((problem, idx) => {
+            const IconComponent = (Icons as any)[problem.icon] || Icons.HelpCircle;
+            return (
             <motion.div
               key={idx}
               variants={fadeUp}
@@ -56,7 +59,7 @@ export default function ServiceProblems({ service }: Props) {
               className="glass-card rounded-2xl p-6"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 mb-4">
-                <problem.icon className="w-6 h-6 text-white" />
+                <IconComponent className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                 {problem.title}
@@ -65,7 +68,7 @@ export default function ServiceProblems({ service }: Props) {
                 {problem.description}
               </p>
             </motion.div>
-          ))}
+          )})}
         </motion.div>
       </div>
     </section>

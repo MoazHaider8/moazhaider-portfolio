@@ -1,8 +1,3 @@
-import { 
-  Wrench, MapPin, ShoppingCart, FileText, Link2, Layout, 
-  TrendingUp, FileSearch, Search, Users, LucideIcon 
-} from "lucide-react";
-
 export interface ServiceDetail {
   slug: string;
   name: string;
@@ -19,7 +14,7 @@ export interface ServiceDetail {
     whoFor: string;
   };
   problems: Array<{
-    icon: LucideIcon;
+    icon: string;
     title: string;
     description: string;
   }>;
@@ -27,7 +22,7 @@ export interface ServiceDetail {
     number: string;
     title: string;
     description: string;
-    icon: LucideIcon;
+    icon: string;
   }>;
   deliverables: Array<{
     category: string;
@@ -37,7 +32,7 @@ export interface ServiceDetail {
   platforms?: string[];
   platformNote?: string;
   whyChooseMe: Array<{
-    icon: LucideIcon;
+    icon: string;
     title: string;
     description: string;
   }>;
@@ -65,20 +60,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential for websites with indexing issues, slow page speeds, crawl errors, or poor mobile performance—especially e-commerce sites, large content sites, and SaaS platforms."
     },
     problems: [
-      { icon: Wrench, title: "Slow Page Speed", description: "Poor Core Web Vitals hurting rankings and user experience" },
-      { icon: FileSearch, title: "Crawl Errors", description: "Pages not being discovered or indexed by search engines" },
-      { icon: Layout, title: "Mobile Issues", description: "Poor mobile usability affecting mobile-first indexing" },
-      { icon: Link2, title: "Broken Links", description: "404 errors and redirect chains damaging site authority" },
-      { icon: Search, title: "Indexation Problems", description: "Important pages blocked from search results" },
-      { icon: TrendingUp, title: "Poor Site Architecture", description: "Confusing URL structure preventing efficient crawling" }
+      { icon: "Wrench", title: "Slow Page Speed", description: "Poor Core Web Vitals hurting rankings and user experience" },
+      { icon: "FileSearch", title: "Crawl Errors", description: "Pages not being discovered or indexed by search engines" },
+      { icon: "Layout", title: "Mobile Issues", description: "Poor mobile usability affecting mobile-first indexing" },
+      { icon: "Link2", title: "Broken Links", description: "404 errors and redirect chains damaging site authority" },
+      { icon: "Search", title: "Indexation Problems", description: "Important pages blocked from search results" },
+      { icon: "TrendingUp", title: "Poor Site Architecture", description: "Confusing URL structure preventing efficient crawling" }
     ],
     process: [
-      { number: "01", title: "Technical Audit", description: "Comprehensive crawl analysis identifying all technical issues affecting SEO performance", icon: FileSearch },
-      { number: "02", title: "Priority Mapping", description: "Categorize issues by impact and create an implementation roadmap", icon: Layout },
-      { number: "03", title: "Core Fixes", description: "Resolve critical issues: crawlability, indexability, site speed, mobile optimization", icon: Wrench },
-      { number: "04", title: "Schema Implementation", description: "Deploy structured data for enhanced search appearance and entity recognition", icon: FileText },
-      { number: "05", title: "Performance Optimization", description: "Improve Core Web Vitals, reduce load times, optimize resources", icon: TrendingUp },
-      { number: "06", title: "Monitoring & Maintenance", description: "Ongoing technical health checks and proactive issue resolution", icon: Search }
+      { number: "01", title: "Technical Audit", description: "Comprehensive crawl analysis identifying all technical issues affecting SEO performance", icon: "FileSearch" },
+      { number: "02", title: "Priority Mapping", description: "Categorize issues by impact and create an implementation roadmap", icon: "Layout" },
+      { number: "03", title: "Core Fixes", description: "Resolve critical issues: crawlability, indexability, site speed, mobile optimization", icon: "Wrench" },
+      { number: "04", title: "Schema Implementation", description: "Deploy structured data for enhanced search appearance and entity recognition", icon: "FileText" },
+      { number: "05", title: "Performance Optimization", description: "Improve Core Web Vitals, reduce load times, optimize resources", icon: "TrendingUp" },
+      { number: "06", title: "Monitoring & Maintenance", description: "Ongoing technical health checks and proactive issue resolution", icon: "Search" }
     ],
     deliverables: [
       { category: "Technical Audit Report", items: ["Complete crawl analysis", "Prioritized issue list", "Core Web Vitals assessment", "Mobile usability review"] },
@@ -89,10 +84,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     platforms: ["WordPress", "Shopify", "Magento", "Webflow", "Wix", "Custom CMS"],
     platformNote: "Technical SEO implementation varies by platform. I have deep experience with all major CMS platforms and can optimize within platform constraints.",
     whyChooseMe: [
-      { icon: Wrench, title: "Expert-Level Execution", description: "15+ years fixing complex technical SEO issues across hundreds of sites" },
-      { icon: TrendingUp, title: "Data-Driven Fixes", description: "Every recommendation backed by crawl data, analytics, and testing" },
-      { icon: Search, title: "Google Best Practices", description: "Adherence to official Google guidelines and Search Central documentation" },
-      { icon: FileText, title: "Transparent Reporting", description: "Clear documentation of all issues found and fixes implemented" }
+      { icon: "Wrench", title: "Expert-Level Execution", description: "15+ years fixing complex technical SEO issues across hundreds of sites" },
+      { icon: "TrendingUp", title: "Data-Driven Fixes", description: "Every recommendation backed by crawl data, analytics, and testing" },
+      { icon: "Search", title: "Google Best Practices", description: "Adherence to official Google guidelines and Search Central documentation" },
+      { icon: "FileText", title: "Transparent Reporting", description: "Clear documentation of all issues found and fixes implemented" }
     ],
     faqs: [
       { question: "How long does technical SEO take?", answer: "Initial audit and priority fixes typically take 2-4 weeks. Ongoing optimization is continuous as search engines and your site evolve." },
@@ -120,20 +115,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Critical for businesses serving specific geographic areas: home services, medical practices, legal firms, restaurants, retail stores, and service-area businesses."
     },
     problems: [
-      { icon: MapPin, title: "Invisible on Google Maps", description: "Not showing up in local pack results for your service area" },
-      { icon: Search, title: "Low Local Rankings", description: "Competitors outranking you for 'near me' and city-based searches" },
-      { icon: Users, title: "Inconsistent NAP Data", description: "Different business information across the web confusing customers and Google" },
-      { icon: FileText, title: "Missing Reviews", description: "Few or no Google reviews compared to competitors" },
-      { icon: MapPin, title: "Wrong Service Areas", description: "Not targeting all the cities and neighborhoods you serve" },
-      { icon: TrendingUp, title: "Poor Conversion", description: "Getting map views but not phone calls or direction requests" }
+      { icon: "MapPin", title: "Invisible on Google Maps", description: "Not showing up in local pack results for your service area" },
+      { icon: "Search", title: "Low Local Rankings", description: "Competitors outranking you for 'near me' and city-based searches" },
+      { icon: "Users", title: "Inconsistent NAP Data", description: "Different business information across the web confusing customers and Google" },
+      { icon: "FileText", title: "Missing Reviews", description: "Few or no Google reviews compared to competitors" },
+      { icon: "MapPin", title: "Wrong Service Areas", description: "Not targeting all the cities and neighborhoods you serve" },
+      { icon: "TrendingUp", title: "Poor Conversion", description: "Getting map views but not phone calls or direction requests" }
     ],
     process: [
-      { number: "01", title: "Local SEO Audit", description: "Analyze your Google Business Profile, citations, reviews, and local visibility", icon: FileSearch },
-      { number: "02", title: "GBP Optimization", description: "Fully optimize your Google Business Profile with categories, photos, posts, and attributes", icon: MapPin },
-      { number: "03", title: "Citation Building", description: "Build and clean up NAP consistency across directories, platforms, and local sites", icon: FileText },
-      { number: "04", title: "Review Strategy", description: "Implement systems to generate and respond to Google reviews authentically", icon: Users },
-      { number: "05", title: "Local Content", description: "Create location-specific content targeting your service areas and local keywords", icon: Layout },
-      { number: "06", title: "Tracking & Reporting", description: "Monitor local rankings, map visibility, calls, and direction requests", icon: TrendingUp }
+      { number: "01", title: "Local SEO Audit", description: "Analyze your Google Business Profile, citations, reviews, and local visibility", icon: "FileSearch" },
+      { number: "02", title: "GBP Optimization", description: "Fully optimize your Google Business Profile with categories, photos, posts, and attributes", icon: "MapPin" },
+      { number: "03", title: "Citation Building", description: "Build and clean up NAP consistency across directories, platforms, and local sites", icon: "FileText" },
+      { number: "04", title: "Review Strategy", description: "Implement systems to generate and respond to Google reviews authentically", icon: "Users" },
+      { number: "05", title: "Local Content", description: "Create location-specific content targeting your service areas and local keywords", icon: "Layout" },
+      { number: "06", title: "Tracking & Reporting", description: "Monitor local rankings, map visibility, calls, and direction requests", icon: "TrendingUp" }
     ],
     deliverables: [
       { category: "GBP Optimization", items: ["Complete profile setup", "Category optimization", "Photo optimization", "Regular posts schedule"] },
@@ -143,10 +138,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["Home Services", "Medical & Dental", "Legal Services", "Restaurants", "Retail", "Professional Services"],
     whyChooseMe: [
-      { icon: MapPin, title: "Local Market Expertise", description: "Proven strategies that work across multiple geographic markets" },
-      { icon: Users, title: "White-Hat Only", description: "No fake reviews, spam, or black-hat tactics that risk penalties" },
-      { icon: TrendingUp, title: "Conversion-Focused", description: "Focus on rankings that drive calls, visits, and revenue—not vanity metrics" },
-      { icon: FileText, title: "Transparent Reporting", description: "Monthly reports showing rankings, visibility, calls, and ROI" }
+      { icon: "MapPin", title: "Local Market Expertise", description: "Proven strategies that work across multiple geographic markets" },
+      { icon: "Users", title: "White-Hat Only", description: "No fake reviews, spam, or black-hat tactics that risk penalties" },
+      { icon: "TrendingUp", title: "Conversion-Focused", description: "Focus on rankings that drive calls, visits, and revenue—not vanity metrics" },
+      { icon: "FileText", title: "Transparent Reporting", description: "Monthly reports showing rankings, visibility, calls, and ROI" }
     ],
     faqs: [
       { question: "How long does local SEO take to work?", answer: "You'll see initial improvements within 4-8 weeks. Full local pack dominance typically takes 3-6 months depending on competition." },
@@ -174,20 +169,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential for online stores of all sizes—from startups to enterprises selling physical products, digital goods, or subscription services."
     },
     problems: [
-      { icon: ShoppingCart, title: "Low Product Visibility", description: "Products buried on page 5+ while competitors dominate page 1" },
-      { icon: Search, title: "Thin Product Descriptions", description: "Duplicate or minimal content failing to rank or convert" },
-      { icon: Layout, title: "Poor Site Architecture", description: "Confusing category structure making products hard to find" },
-      { icon: TrendingUp, title: "High Bounce Rates", description: "Traffic arriving but not converting into sales" },
-      { icon: FileText, title: "Missing Rich Snippets", description: "No star ratings, pricing, or availability showing in search" },
-      { icon: Link2, title: "Weak Internal Linking", description: "Products not benefiting from category and homepage authority" }
+      { icon: "ShoppingCart", title: "Low Product Visibility", description: "Products buried on page 5+ while competitors dominate page 1" },
+      { icon: "Search", title: "Thin Product Descriptions", description: "Duplicate or minimal content failing to rank or convert" },
+      { icon: "Layout", title: "Poor Site Architecture", description: "Confusing category structure making products hard to find" },
+      { icon: "TrendingUp", title: "High Bounce Rates", description: "Traffic arriving but not converting into sales" },
+      { icon: "FileText", title: "Missing Rich Snippets", description: "No star ratings, pricing, or availability showing in search" },
+      { icon: "Link2", title: "Weak Internal Linking", description: "Products not benefiting from category and homepage authority" }
     ],
     process: [
-      { number: "01", title: "Store Audit", description: "Comprehensive analysis of site structure, technical issues, and content gaps", icon: FileSearch },
-      { number: "02", title: "Keyword Research", description: "Identify high-intent product and category keywords with buyer intent", icon: Search },
-      { number: "03", title: "Technical Optimization", description: "Fix crawl issues, improve site speed, optimize for mobile shoppers", icon: Wrench },
-      { number: "04", title: "On-Page Optimization", description: "Optimize product titles, descriptions, images, and category pages", icon: Layout },
-      { number: "05", title: "Schema Implementation", description: "Add product schema for rich snippets, reviews, pricing, and availability", icon: FileText },
-      { number: "06", title: "Content Strategy", description: "Build buying guides, comparison pages, and category descriptions", icon: FileText }
+      { number: "01", title: "Store Audit", description: "Comprehensive analysis of site structure, technical issues, and content gaps", icon: "FileSearch" },
+      { number: "02", title: "Keyword Research", description: "Identify high-intent product and category keywords with buyer intent", icon: "Search" },
+      { number: "03", title: "Technical Optimization", description: "Fix crawl issues, improve site speed, optimize for mobile shoppers", icon: "Wrench" },
+      { number: "04", title: "On-Page Optimization", description: "Optimize product titles, descriptions, images, and category pages", icon: "Layout" },
+      { number: "05", title: "Schema Implementation", description: "Add product schema for rich snippets, reviews, pricing, and availability", icon: "FileText" },
+      { number: "06", title: "Content Strategy", description: "Build buying guides, comparison pages, and category descriptions", icon: "FileText" }
     ],
     deliverables: [
       { category: "Technical SEO", items: ["Site speed optimization", "Mobile optimization", "Crawl efficiency improvements", "Pagination & filtering fixes"] },
@@ -199,10 +194,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce", "Wix", "Custom platforms"],
     platformNote: "Each e-commerce platform has unique SEO considerations. I optimize within your platform's capabilities while maximizing search visibility.",
     whyChooseMe: [
-      { icon: ShoppingCart, title: "Revenue-Focused", description: "Prioritize keywords and optimizations that drive sales, not vanity traffic" },
-      { icon: TrendingUp, title: "Platform Expertise", description: "Deep experience with all major e-commerce platforms and their SEO limitations" },
-      { icon: FileText, title: "Conversion Optimization", description: "SEO strategies that improve rankings AND product conversion rates" },
-      { icon: Search, title: "Competitive Analysis", description: "Identify gaps in competitor strategies and capitalize on opportunities" }
+      { icon: "ShoppingCart", title: "Revenue-Focused", description: "Prioritize keywords and optimizations that drive sales, not vanity traffic" },
+      { icon: "TrendingUp", title: "Platform Expertise", description: "Deep experience with all major e-commerce platforms and their SEO limitations" },
+      { icon: "FileText", title: "Conversion Optimization", description: "SEO strategies that improve rankings AND product conversion rates" },
+      { icon: "Search", title: "Competitive Analysis", description: "Identify gaps in competitor strategies and capitalize on opportunities" }
     ],
     faqs: [
       { question: "How long does e-commerce SEO take?", answer: "Initial improvements appear within 2-3 months. Full category and product dominance takes 6-12 months depending on competition and catalog size." },
@@ -212,10 +207,9 @@ export const servicesData: Record<string, ServiceDetail> = {
       { question: "Is e-commerce SEO different from regular SEO?", answer: "Yes—it requires product-specific optimization, schema markup, category structure planning, and dealing with duplicate content challenges unique to online stores." }
     ],
     relatedServices: ["technical-seo", "content-seo", "link-building"]
-  }
-};
+  },
 
-"content-seo": {
+  "content-seo": {
     slug: "content-seo",
     name: "Content SEO",
     primaryKeyword: "content SEO services",
@@ -231,20 +225,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential for businesses looking to build organic visibility, establish thought leadership, and drive conversions through educational and transactional content."
     },
     problems: [
-      { icon: FileText, title: "Thin Content", description: "Pages with insufficient depth failing to compete with comprehensive competitor content" },
-      { icon: Search, title: "Wrong Keywords", description: "Targeting keywords with no search volume or commercial intent" },
-      { icon: Users, title: "Poor Engagement", description: "High bounce rates and low time-on-page signaling poor content quality" },
-      { icon: TrendingUp, title: "No Topical Authority", description: "Lack of comprehensive coverage preventing rankings for competitive terms" },
-      { icon: FileText, title: "Duplicate Content", description: "Similar pages competing against each other internally" },
-      { icon: Layout, title: "Bad Content Structure", description: "Poor formatting and organization hurting readability and SEO" }
+      { icon: "FileText", title: "Thin Content", description: "Pages with insufficient depth failing to compete with comprehensive competitor content" },
+      { icon: "Search", title: "Wrong Keywords", description: "Targeting keywords with no search volume or commercial intent" },
+      { icon: "Users", title: "Poor Engagement", description: "High bounce rates and low time-on-page signaling poor content quality" },
+      { icon: "TrendingUp", title: "No Topical Authority", description: "Lack of comprehensive coverage preventing rankings for competitive terms" },
+      { icon: "FileText", title: "Duplicate Content", description: "Similar pages competing against each other internally" },
+      { icon: "Layout", title: "Bad Content Structure", description: "Poor formatting and organization hurting readability and SEO" }
     ],
     process: [
-      { number: "01", title: "Content Audit", description: "Analyze existing content performance, gaps, and optimization opportunities", icon: FileSearch },
-      { number: "02", title: "Keyword Strategy", description: "Map keywords to content types based on search intent and business goals", icon: Search },
-      { number: "03", title: "Topic Clusters", description: "Build topical authority with pillar pages and supporting cluster content", icon: Layout },
-      { number: "04", title: "Content Creation", description: "Produce high-quality, comprehensive content optimized for target keywords", icon: FileText },
-      { number: "05", title: "On-Page Optimization", description: "Optimize titles, headings, internal links, and semantic SEO elements", icon: Wrench },
-      { number: "06", title: "Performance Tracking", description: "Monitor rankings, traffic, and conversions for all content", icon: TrendingUp }
+      { number: "01", title: "Content Audit", description: "Analyze existing content performance, gaps, and optimization opportunities", icon: "FileSearch" },
+      { number: "02", title: "Keyword Strategy", description: "Map keywords to content types based on search intent and business goals", icon: "Search" },
+      { number: "03", title: "Topic Clusters", description: "Build topical authority with pillar pages and supporting cluster content", icon: "Layout" },
+      { number: "04", title: "Content Creation", description: "Produce high-quality, comprehensive content optimized for target keywords", icon: "FileText" },
+      { number: "05", title: "On-Page Optimization", description: "Optimize titles, headings, internal links, and semantic SEO elements", icon: "Wrench" },
+      { number: "06", title: "Performance Tracking", description: "Monitor rankings, traffic, and conversions for all content", icon: "TrendingUp" }
     ],
     deliverables: [
       { category: "Strategy", items: ["Content gap analysis", "Keyword mapping", "Topic cluster plan", "Content calendar"] },
@@ -254,10 +248,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["SaaS", "Professional Services", "E-commerce", "B2B", "Healthcare", "Finance"],
     whyChooseMe: [
-      { icon: FileText, title: "Semantic SEO Expert", description: "Deep understanding of entity-based SEO and topical authority building" },
-      { icon: Search, title: "Intent-Focused", description: "Content mapped to precise search intent for maximum relevance" },
-      { icon: Users, title: "Conversion-Driven", description: "Content that ranks AND converts visitors into customers" },
-      { icon: TrendingUp, title: "Data-Backed", description: "Every content decision backed by keyword research and competitor analysis" }
+      { icon: "FileText", title: "Semantic SEO Expert", description: "Deep understanding of entity-based SEO and topical authority building" },
+      { icon: "Search", title: "Intent-Focused", description: "Content mapped to precise search intent for maximum relevance" },
+      { icon: "Users", title: "Conversion-Driven", description: "Content that ranks AND converts visitors into customers" },
+      { icon: "TrendingUp", title: "Data-Backed", description: "Every content decision backed by keyword research and competitor analysis" }
     ],
     faqs: [
       { question: "How many blog posts do I need?", answer: "Quality over quantity. Start with 10-15 high-quality pieces targeting your most valuable keywords, then scale based on performance." },
@@ -285,20 +279,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Critical for any site competing for valuable keywords—especially new sites building initial authority or established sites trying to outrank strong competitors."
     },
     problems: [
-      { icon: Link2, title: "Low Domain Authority", description: "Weak backlink profile preventing rankings for competitive keywords" },
-      { icon: TrendingUp, title: "Competitors Outranking You", description: "Sites with stronger link profiles dominating your target keywords" },
-      { icon: Search, title: "Penalty Risk", description: "Spammy or low-quality links harming your rankings" },
-      { icon: FileText, title: "No Link Strategy", description: "Random, unfocused link acquisition with no clear plan" },
-      { icon: Users, title: "Irrelevant Links", description: "Backlinks from unrelated sites providing no authority benefit" },
-      { icon: Wrench, title: "Slow Progress", description: "Link building taking too long with minimal results" }
+      { icon: "Link2", title: "Low Domain Authority", description: "Weak backlink profile preventing rankings for competitive keywords" },
+      { icon: "TrendingUp", title: "Competitors Outranking You", description: "Sites with stronger link profiles dominating your target keywords" },
+      { icon: "Search", title: "Penalty Risk", description: "Spammy or low-quality links harming your rankings" },
+      { icon: "FileText", title: "No Link Strategy", description: "Random, unfocused link acquisition with no clear plan" },
+      { icon: "Users", title: "Irrelevant Links", description: "Backlinks from unrelated sites providing no authority benefit" },
+      { icon: "Wrench", title: "Slow Progress", description: "Link building taking too long with minimal results" }
     ],
     process: [
-      { number: "01", title: "Link Audit", description: "Analyze your current backlink profile and identify toxic links to disavow", icon: FileSearch },
-      { number: "02", title: "Competitor Analysis", description: "Study competitor link profiles to identify opportunities and gaps", icon: Users },
-      { number: "03", title: "Strategy Development", description: "Create a custom link acquisition plan based on your niche and goals", icon: Layout },
-      { number: "04", title: "Outreach & Acquisition", description: "Execute white-hat link building tactics: guest posts, PR, resource links", icon: Link2 },
-      { number: "05", title: "Content Assets", description: "Create linkable assets that naturally attract backlinks", icon: FileText },
-      { number: "06", title: "Monitoring & Reporting", description: "Track new links, domain authority growth, and ranking improvements", icon: TrendingUp }
+      { number: "01", title: "Link Audit", description: "Analyze your current backlink profile and identify toxic links to disavow", icon: "FileSearch" },
+      { number: "02", title: "Competitor Analysis", description: "Study competitor link profiles to identify opportunities and gaps", icon: "Users" },
+      { number: "03", title: "Strategy Development", description: "Create a custom link acquisition plan based on your niche and goals", icon: "Layout" },
+      { number: "04", title: "Outreach & Acquisition", description: "Execute white-hat link building tactics: guest posts, PR, resource links", icon: "Link2" },
+      { number: "05", title: "Content Assets", description: "Create linkable assets that naturally attract backlinks", icon: "FileText" },
+      { number: "06", title: "Monitoring & Reporting", description: "Track new links, domain authority growth, and ranking improvements", icon: "TrendingUp" }
     ],
     deliverables: [
       { category: "Strategy", items: ["Link gap analysis", "Competitor backlink study", "Custom outreach strategy", "Linkable asset plan"] },
@@ -308,10 +302,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Professional Services"],
     whyChooseMe: [
-      { icon: Link2, title: "White-Hat Only", description: "100% ethical link building—no spam, PBNs, or black-hat tactics" },
-      { icon: TrendingUp, title: "Quality Over Quantity", description: "Focus on high-authority, relevant links that move the needle" },
-      { icon: Users, title: "Relationship-Based", description: "Build real relationships with editors and site owners for sustainable links" },
-      { icon: FileText, title: "Transparent Reporting", description: "Full disclosure of every link acquired with metrics and proof" }
+      { icon: "Link2", title: "White-Hat Only", description: "100% ethical link building—no spam, PBNs, or black-hat tactics" },
+      { icon: "TrendingUp", title: "Quality Over Quantity", description: "Focus on high-authority, relevant links that move the needle" },
+      { icon: "Users", title: "Relationship-Based", description: "Build real relationships with editors and site owners for sustainable links" },
+      { icon: "FileText", title: "Transparent Reporting", description: "Full disclosure of every link acquired with metrics and proof" }
     ],
     faqs: [
       { question: "How many links do I need?", answer: "Quality matters more than quantity. 5-10 high-authority links often outperform 100 low-quality links. Strategy depends on your competition." },
@@ -339,20 +333,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential for every website—whether you're launching new pages, refreshing existing content, or trying to improve underperforming pages."
     },
     problems: [
-      { icon: FileText, title: "Poor Title Tags", description: "Missing keywords or weak titles failing to attract clicks" },
-      { icon: Layout, title: "Bad Content Structure", description: "No clear H1/H2/H3 hierarchy confusing users and search engines" },
-      { icon: Search, title: "Keyword Cannibalization", description: "Multiple pages competing for the same keywords" },
-      { icon: Link2, title: "Weak Internal Linking", description: "Pages not benefiting from site-wide authority distribution" },
-      { icon: FileSearch, title: "Missing Schema Markup", description: "No structured data limiting rich snippet opportunities" },
-      { icon: Users, title: "High Bounce Rates", description: "Poor UX signals harming rankings despite good content" }
+      { icon: "FileText", title: "Poor Title Tags", description: "Missing keywords or weak titles failing to attract clicks" },
+      { icon: "Layout", title: "Bad Content Structure", description: "No clear H1/H2/H3 hierarchy confusing users and search engines" },
+      { icon: "Search", title: "Keyword Cannibalization", description: "Multiple pages competing for the same keywords" },
+      { icon: "Link2", title: "Weak Internal Linking", description: "Pages not benefiting from site-wide authority distribution" },
+      { icon: "FileSearch", title: "Missing Schema Markup", description: "No structured data limiting rich snippet opportunities" },
+      { icon: "Users", title: "High Bounce Rates", description: "Poor UX signals harming rankings despite good content" }
     ],
     process: [
-      { number: "01", title: "Page Audit", description: "Analyze all on-page elements: titles, descriptions, headings, content, images", icon: FileSearch },
-      { number: "02", title: "Keyword Mapping", description: "Assign target keywords to pages based on intent and search volume", icon: Search },
-      { number: "03", title: "Content Optimization", description: "Enhance content quality, depth, readability, and keyword targeting", icon: FileText },
-      { number: "04", title: "HTML Optimization", description: "Perfect title tags, meta descriptions, headings, and image alt text", icon: Layout },
-      { number: "05", title: "Internal Linking", description: "Build strategic internal link structure to distribute authority", icon: Link2 },
-      { number: "06", title: "Schema Implementation", description: "Add relevant structured data for enhanced search appearance", icon: Wrench }
+      { number: "01", title: "Page Audit", description: "Analyze all on-page elements: titles, descriptions, headings, content, images", icon: "FileSearch" },
+      { number: "02", title: "Keyword Mapping", description: "Assign target keywords to pages based on intent and search volume", icon: "Search" },
+      { number: "03", title: "Content Optimization", description: "Enhance content quality, depth, readability, and keyword targeting", icon: "FileText" },
+      { number: "04", title: "HTML Optimization", description: "Perfect title tags, meta descriptions, headings, and image alt text", icon: "Layout" },
+      { number: "05", title: "Internal Linking", description: "Build strategic internal link structure to distribute authority", icon: "Link2" },
+      { number: "06", title: "Schema Implementation", description: "Add relevant structured data for enhanced search appearance", icon: "Wrench" }
     ],
     deliverables: [
       { category: "HTML Elements", items: ["Optimized title tags", "Compelling meta descriptions", "Proper heading hierarchy", "Image alt text optimization"] },
@@ -364,10 +358,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     platforms: ["WordPress", "Shopify", "Webflow", "Custom CMS", "Static sites"],
     platformNote: "On-page SEO works on any platform. Implementation methods vary, but optimization principles remain consistent.",
     whyChooseMe: [
-      { icon: Search, title: "Semantic SEO Expert", description: "Deep understanding of entity-based optimization and topical relevance" },
-      { icon: FileText, title: "User-Focused", description: "Optimization that improves both rankings and user experience" },
-      { icon: TrendingUp, title: "Data-Driven", description: "Every change backed by keyword research and competitive analysis" },
-      { icon: Layout, title: "Conversion-Aware", description: "Optimize for rankings AND conversions, not just traffic" }
+      { icon: "Search", title: "Semantic SEO Expert", description: "Deep understanding of entity-based optimization and topical relevance" },
+      { icon: "FileText", title: "User-Focused", description: "Optimization that improves both rankings and user experience" },
+      { icon: "TrendingUp", title: "Data-Driven", description: "Every change backed by keyword research and competitive analysis" },
+      { icon: "Layout", title: "Conversion-Aware", description: "Optimize for rankings AND conversions, not just traffic" }
     ],
     faqs: [
       { question: "How long does on-page SEO take?", answer: "Initial optimization of key pages takes 2-4 weeks. Full site optimization depends on site size but typically 1-3 months." },
@@ -395,20 +389,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Critical for sites in competitive niches, new sites building initial authority, or established sites trying to outrank stronger competitors."
     },
     problems: [
-      { icon: TrendingUp, title: "Low Domain Authority", description: "Weak off-page profile preventing rankings for competitive terms" },
-      { icon: Link2, title: "Few Quality Backlinks", description: "Not enough high-authority sites linking to your content" },
-      { icon: Users, title: "No Brand Recognition", description: "Lack of brand mentions and citations hurting E-E-A-T signals" },
-      { icon: Search, title: "Competitor Dominance", description: "Competitors with stronger off-page profiles outranking you" },
-      { icon: FileText, title: "Toxic Backlinks", description: "Spammy links from previous tactics harming your rankings" },
-      { icon: MapPin, title: "Weak Local Signals", description: "Missing local citations and reviews for local rankings" }
+      { icon: "TrendingUp", title: "Low Domain Authority", description: "Weak off-page profile preventing rankings for competitive terms" },
+      { icon: "Link2", title: "Few Quality Backlinks", description: "Not enough high-authority sites linking to your content" },
+      { icon: "Users", title: "No Brand Recognition", description: "Lack of brand mentions and citations hurting E-E-A-T signals" },
+      { icon: "Search", title: "Competitor Dominance", description: "Competitors with stronger off-page profiles outranking you" },
+      { icon: "FileText", title: "Toxic Backlinks", description: "Spammy links from previous tactics harming your rankings" },
+      { icon: "MapPin", title: "Weak Local Signals", description: "Missing local citations and reviews for local rankings" }
     ],
     process: [
-      { number: "01", title: "Authority Audit", description: "Analyze your backlink profile, domain authority, and off-page signals", icon: FileSearch },
-      { number: "02", title: "Competitor Research", description: "Study competitor link profiles and identify acquisition opportunities", icon: Users },
-      { number: "03", title: "Link Strategy", description: "Develop white-hat link building plan targeting high-authority sites", icon: Link2 },
-      { number: "04", title: "Brand Building", description: "Secure brand mentions, PR placements, and thought leadership opportunities", icon: TrendingUp },
-      { number: "05", title: "Reputation Management", description: "Build positive reviews, manage citations, strengthen E-E-A-T signals", icon: FileText },
-      { number: "06", title: "Monitoring", description: "Track new links, mentions, domain authority growth, and ranking impact", icon: Search }
+      { number: "01", title: "Authority Audit", description: "Analyze your backlink profile, domain authority, and off-page signals", icon: "FileSearch" },
+      { number: "02", title: "Competitor Research", description: "Study competitor link profiles and identify acquisition opportunities", icon: "Users" },
+      { number: "03", title: "Link Strategy", description: "Develop white-hat link building plan targeting high-authority sites", icon: "Link2" },
+      { number: "04", title: "Brand Building", description: "Secure brand mentions, PR placements, and thought leadership opportunities", icon: "TrendingUp" },
+      { number: "05", title: "Reputation Management", description: "Build positive reviews, manage citations, strengthen E-E-A-T signals", icon: "FileText" },
+      { number: "06", title: "Monitoring", description: "Track new links, mentions, domain authority growth, and ranking impact", icon: "Search" }
     ],
     deliverables: [
       { category: "Link Acquisition", items: ["High-authority backlinks", "Guest post placements", "Resource page links", "Editorial mentions"] },
@@ -418,10 +412,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["All industries", "SaaS", "E-commerce", "B2B", "Professional Services", "Local Business"],
     whyChooseMe: [
-      { icon: Link2, title: "White-Hat Strategies", description: "100% ethical tactics that build lasting authority without risk" },
-      { icon: TrendingUp, title: "Relationship-Based", description: "Real connections with publishers, journalists, and industry influencers" },
-      { icon: Users, title: "Brand-Focused", description: "Build actual brand authority, not just manipulated link metrics" },
-      { icon: FileText, title: "Full Transparency", description: "Complete disclosure of all off-page activities and results" }
+      { icon: "Link2", title: "White-Hat Strategies", description: "100% ethical tactics that build lasting authority without risk" },
+      { icon: "TrendingUp", title: "Relationship-Based", description: "Real connections with publishers, journalists, and industry influencers" },
+      { icon: "Users", title: "Brand-Focused", description: "Build actual brand authority, not just manipulated link metrics" },
+      { icon: "FileText", title: "Full Transparency", description: "Complete disclosure of all off-page activities and results" }
     ],
     faqs: [
       { question: "What's the difference between off-page and link building?", answer: "Link building is part of off-page SEO. Off-page also includes brand mentions, social signals, reviews, and reputation management." },
@@ -449,20 +443,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential before starting any SEO campaign, when rankings drop unexpectedly, after site migrations, or annually to maintain search performance."
     },
     problems: [
-      { icon: Search, title: "Declining Rankings", description: "Rankings dropping but you don't know why or what to fix first" },
-      { icon: Wrench, title: "Unknown Technical Issues", description: "Hidden problems preventing Google from properly crawling or indexing" },
-      { icon: FileText, title: "Content Gaps", description: "Missing topics and keywords competitors are ranking for" },
-      { icon: TrendingUp, title: "Poor ROI", description: "SEO investment not delivering expected results" },
-      { icon: Link2, title: "Penalty Risk", description: "Unsure if your backlink profile or tactics are risky" },
-      { icon: Layout, title: "No Clear Strategy", description: "Don't know what to prioritize or where to start" }
+      { icon: "Search", title: "Declining Rankings", description: "Rankings dropping but you don't know why or what to fix first" },
+      { icon: "Wrench", title: "Unknown Technical Issues", description: "Hidden problems preventing Google from properly crawling or indexing" },
+      { icon: "FileText", title: "Content Gaps", description: "Missing topics and keywords competitors are ranking for" },
+      { icon: "TrendingUp", title: "Poor ROI", description: "SEO investment not delivering expected results" },
+      { icon: "Link2", title: "Penalty Risk", description: "Unsure if your backlink profile or tactics are risky" },
+      { icon: "Layout", title: "No Clear Strategy", description: "Don't know what to prioritize or where to start" }
     ],
     process: [
-      { number: "01", title: "Technical Crawl", description: "Full site crawl analyzing structure, speed, mobile, indexability, and errors", icon: Wrench },
-      { number: "02", title: "On-Page Analysis", description: "Evaluate titles, content, internal linking, and keyword optimization", icon: FileText },
-      { number: "03", title: "Backlink Audit", description: "Assess link profile quality, toxic links, and authority opportunities", icon: Link2 },
-      { number: "04", title: "Competitor Comparison", description: "Benchmark against top-ranking competitors in your niche", icon: Users },
-      { number: "05", title: "Opportunity Identification", description: "Find quick wins and high-impact improvements for rankings", icon: Search },
-      { number: "06", title: "Roadmap Creation", description: "Deliver prioritized action plan with timeline and expected impact", icon: TrendingUp }
+      { number: "01", title: "Technical Crawl", description: "Full site crawl analyzing structure, speed, mobile, indexability, and errors", icon: "Wrench" },
+      { number: "02", title: "On-Page Analysis", description: "Evaluate titles, content, internal linking, and keyword optimization", icon: "FileText" },
+      { number: "03", title: "Backlink Audit", description: "Assess link profile quality, toxic links, and authority opportunities", icon: "Link2" },
+      { number: "04", title: "Competitor Comparison", description: "Benchmark against top-ranking competitors in your niche", icon: "Users" },
+      { number: "05", title: "Opportunity Identification", description: "Find quick wins and high-impact improvements for rankings", icon: "Search" },
+      { number: "06", title: "Roadmap Creation", description: "Deliver prioritized action plan with timeline and expected impact", icon: "TrendingUp" }
     ],
     deliverables: [
       { category: "Technical Audit", items: ["Full crawl report", "Page speed analysis", "Mobile usability review", "Indexation issues", "Core Web Vitals assessment"] },
@@ -474,10 +468,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     platforms: ["WordPress", "Shopify", "Magento", "Webflow", "Wix", "Custom platforms"],
     platformNote: "SEO audits work for any platform. Analysis identifies platform-specific issues and limitations.",
     whyChooseMe: [
-      { icon: FileSearch, title: "Comprehensive Coverage", description: "Full technical, on-page, and off-page analysis—nothing missed" },
-      { icon: TrendingUp, title: "Actionable Insights", description: "Clear, prioritized recommendations—not overwhelming data dumps" },
-      { icon: Wrench, title: "Expert Analysis", description: "15+ years of experience interpreting data and identifying root causes" },
-      { icon: FileText, title: "Clear Roadmap", description: "Step-by-step implementation plan with timelines and impact" }
+      { icon: "FileSearch", title: "Comprehensive Coverage", description: "Full technical, on-page, and off-page analysis—nothing missed" },
+      { icon: "TrendingUp", title: "Actionable Insights", description: "Clear, prioritized recommendations—not overwhelming data dumps" },
+      { icon: "Wrench", title: "Expert Analysis", description: "15+ years of experience interpreting data and identifying root causes" },
+      { icon: "FileText", title: "Clear Roadmap", description: "Step-by-step implementation plan with timelines and impact" }
     ],
     faqs: [
       { question: "How long does an SEO audit take?", answer: "Most audits are completed within 1-2 weeks depending on site size. Small sites (under 100 pages) can be audited in 3-5 days." },
@@ -505,20 +499,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential before starting any SEO campaign, launching new content, or expanding into new markets or product lines."
     },
     problems: [
-      { icon: Search, title: "Targeting Wrong Keywords", description: "Ranking for terms that don't drive conversions or revenue" },
-      { icon: Users, title: "No Search Volume", description: "Targeting keywords nobody actually searches for" },
-      { icon: TrendingUp, title: "Too Competitive", description: "Chasing keywords impossible to rank for with your authority" },
-      { icon: FileText, title: "Missing Opportunities", description: "Competitors ranking for valuable terms you haven't targeted" },
-      { icon: Layout, title: "Unclear Search Intent", description: "Content not matching what searchers actually want" },
-      { icon: FileSearch, title: "No Content Strategy", description: "Keywords identified but no plan for implementation" }
+      { icon: "Search", title: "Targeting Wrong Keywords", description: "Ranking for terms that don't drive conversions or revenue" },
+      { icon: "Users", title: "No Search Volume", description: "Targeting keywords nobody actually searches for" },
+      { icon: "TrendingUp", title: "Too Competitive", description: "Chasing keywords impossible to rank for with your authority" },
+      { icon: "FileText", title: "Missing Opportunities", description: "Competitors ranking for valuable terms you haven't targeted" },
+      { icon: "Layout", title: "Unclear Search Intent", description: "Content not matching what searchers actually want" },
+      { icon: "FileSearch", title: "No Content Strategy", description: "Keywords identified but no plan for implementation" }
     ],
     process: [
-      { number: "01", title: "Business Discovery", description: "Understand your products, services, audience, and business goals", icon: Users },
-      { number: "02", title: "Seed Keyword Expansion", description: "Generate comprehensive keyword list from core terms and topics", icon: Search },
-      { number: "03", title: "Search Volume Analysis", description: "Assess real search volume and traffic potential for each term", icon: TrendingUp },
-      { number: "04", title: "Competition Assessment", description: "Evaluate keyword difficulty and ranking feasibility", icon: FileSearch },
-      { number: "05", title: "Intent Classification", description: "Categorize keywords by search intent: informational, commercial, transactional", icon: Layout },
-      { number: "06", title: "Keyword Mapping", description: "Map keywords to pages, content types, and implementation priority", icon: FileText }
+      { number: "01", title: "Business Discovery", description: "Understand your products, services, audience, and business goals", icon: "Users" },
+      { number: "02", title: "Seed Keyword Expansion", description: "Generate comprehensive keyword list from core terms and topics", icon: "Search" },
+      { number: "03", title: "Search Volume Analysis", description: "Assess real search volume and traffic potential for each term", icon: "TrendingUp" },
+      { number: "04", title: "Competition Assessment", description: "Evaluate keyword difficulty and ranking feasibility", icon: "FileSearch" },
+      { number: "05", title: "Intent Classification", description: "Categorize keywords by search intent: informational, commercial, transactional", icon: "Layout" },
+      { number: "06", title: "Keyword Mapping", description: "Map keywords to pages, content types, and implementation priority", icon: "FileText" }
     ],
     deliverables: [
       { category: "Keyword List", items: ["500-1000 relevant keywords", "Search volume data", "Competition metrics", "Keyword difficulty scores"] },
@@ -528,10 +522,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Services"],
     whyChooseMe: [
-      { icon: Search, title: "Intent-Focused", description: "Prioritize keywords based on business value and search intent, not just volume" },
-      { icon: TrendingUp, title: "Realistic Targets", description: "Identify keywords you can actually rank for based on your authority" },
-      { icon: FileText, title: "Strategic Mapping", description: "Clear implementation plan—not just a spreadsheet of keywords" },
-      { icon: Users, title: "Competitor Insights", description: "Identify gaps in competitor strategies you can exploit" }
+      { icon: "Search", title: "Intent-Focused", description: "Prioritize keywords based on business value and search intent, not just volume" },
+      { icon: "TrendingUp", title: "Realistic Targets", description: "Identify keywords you can actually rank for based on your authority" },
+      { icon: "FileText", title: "Strategic Mapping", description: "Clear implementation plan—not just a spreadsheet of keywords" },
+      { icon: "Users", title: "Competitor Insights", description: "Identify gaps in competitor strategies you can exploit" }
     ],
     faqs: [
       { question: "How many keywords should I target?", answer: "Quality over quantity. Start with 20-30 high-value keywords, then expand. Most sites can meaningfully target 100-300 keywords." },
@@ -559,20 +553,20 @@ export const servicesData: Record<string, ServiceDetail> = {
       whoFor: "Essential for entering competitive markets, improving existing rankings, or understanding why competitors consistently outrank you."
     },
     problems: [
-      { icon: TrendingUp, title: "Competitors Outranking You", description: "Competitors dominating page 1 for your target keywords" },
-      { icon: Search, title: "Unknown Tactics", description: "Don't know what competitors are doing to rank" },
-      { icon: Link2, title: "Link Gap", description: "Competitors have links from sites you haven't targeted" },
-      { icon: FileText, title: "Content Advantage", description: "Competitors producing content you haven't thought of" },
-      { icon: Layout, title: "Missed Opportunities", description: "Competitors ranking for keywords you didn't know existed" },
-      { icon: Users, title: "No Differentiation", description: "Can't identify unique angles to stand out" }
+      { icon: "TrendingUp", title: "Competitors Outranking You", description: "Competitors dominating page 1 for your target keywords" },
+      { icon: "Search", title: "Unknown Tactics", description: "Don't know what competitors are doing to rank" },
+      { icon: "Link2", title: "Link Gap", description: "Competitors have links from sites you haven't targeted" },
+      { icon: "FileText", title: "Content Advantage", description: "Competitors producing content you haven't thought of" },
+      { icon: "Layout", title: "Missed Opportunities", description: "Competitors ranking for keywords you didn't know existed" },
+      { icon: "Users", title: "No Differentiation", description: "Can't identify unique angles to stand out" }
     ],
     process: [
-      { number: "01", title: "Competitor Identification", description: "Identify your true SEO competitors based on keyword overlap", icon: Users },
-      { number: "02", title: "Keyword Gap Analysis", description: "Find keywords competitors rank for that you don't", icon: Search },
-      { number: "03", title: "Backlink Analysis", description: "Analyze competitor link profiles and identify acquisition opportunities", icon: Link2 },
-      { number: "04", title: "Content Audit", description: "Evaluate competitor content depth, topics, and engagement", icon: FileText },
-      { number: "05", title: "Technical Review", description: "Assess competitor site speed, structure, and technical advantages", icon: Wrench },
-      { number: "06", title: "Strategy Development", description: "Create action plan to close gaps and exploit weaknesses", icon: TrendingUp }
+      { number: "01", title: "Competitor Identification", description: "Identify your true SEO competitors based on keyword overlap", icon: "Users" },
+      { number: "02", title: "Keyword Gap Analysis", description: "Find keywords competitors rank for that you don't", icon: "Search" },
+      { number: "03", title: "Backlink Analysis", description: "Analyze competitor link profiles and identify acquisition opportunities", icon: "Link2" },
+      { number: "04", title: "Content Audit", description: "Evaluate competitor content depth, topics, and engagement", icon: "FileText" },
+      { number: "05", title: "Technical Review", description: "Assess competitor site speed, structure, and technical advantages", icon: "Wrench" },
+      { number: "06", title: "Strategy Development", description: "Create action plan to close gaps and exploit weaknesses", icon: "TrendingUp" }
     ],
     deliverables: [
       { category: "Competitor Profiles", items: ["3-5 competitor deep-dives", "Traffic estimates", "Top ranking keywords", "Domain authority metrics"] },
@@ -582,10 +576,10 @@ export const servicesData: Record<string, ServiceDetail> = {
     ],
     industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Professional Services"],
     whyChooseMe: [
-      { icon: Users, title: "True Competitor Focus", description: "Analyze actual SEO competitors, not just business competitors" },
-      { icon: Search, title: "Actionable Intelligence", description: "Clear opportunities and tactics you can implement, not just data" },
-      { icon: TrendingUp, title: "Weakness Exploitation", description: "Identify gaps in competitor strategies you can capitalize on" },
-      { icon: FileText, title: "Ongoing Monitoring", description: "Track competitor changes and adapt strategy proactively" }
+      { icon: "Users", title: "True Competitor Focus", description: "Analyze actual SEO competitors, not just business competitors" },
+      { icon: "Search", title: "Actionable Intelligence", description: "Clear opportunities and tactics you can implement, not just data" },
+      { icon: "TrendingUp", title: "Weakness Exploitation", description: "Identify gaps in competitor strategies you can capitalize on" },
+      { icon: "FileText", title: "Ongoing Monitoring", description: "Track competitor changes and adapt strategy proactively" }
     ],
     faqs: [
       { question: "How many competitors should I analyze?", answer: "3-5 direct SEO competitors is optimal. More than that dilutes focus; fewer misses important patterns." },
