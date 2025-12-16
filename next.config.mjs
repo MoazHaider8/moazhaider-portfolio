@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // Force Vercel to rebuild
+};
 
 export default nextConfig;
