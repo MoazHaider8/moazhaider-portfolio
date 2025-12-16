@@ -321,7 +321,282 @@ export const servicesData: Record<string, ServiceDetail> = {
       { question: "What's the difference between do-follow and no-follow links?", answer: "Do-follow links pass authority; no-follow don't. Both are valuable—a natural profile includes both types from diverse sources." }
     ],
     relatedServices: ["content-seo", "off-page-seo", "competitor-analysis"]
+  },
+
+  "on-page-seo": {
+    slug: "on-page-seo",
+    name: "On-Page SEO",
+    primaryKeyword: "on-page SEO services",
+    secondaryKeywords: ["page optimization", "meta tags", "content optimization", "internal linking"],
+    hero: {
+      badge: "SEO Services",
+      headline: "On-Page SEO That Maximizes Every Page's Ranking Potential",
+      description: "Optimize every element on your pages—from titles and headings to content structure and internal linking. Make every page work harder for rankings and conversions."
+    },
+    definition: {
+      what: "On-page SEO is the practice of optimizing individual web pages to rank higher and earn more relevant traffic by improving content, HTML elements, and user experience signals.",
+      why: "On-page SEO tells search engines exactly what your page is about and why it deserves to rank. Without proper optimization, even great content won't reach its ranking potential.",
+      whoFor: "Essential for every website—whether you're launching new pages, refreshing existing content, or trying to improve underperforming pages."
+    },
+    problems: [
+      { icon: FileText, title: "Poor Title Tags", description: "Missing keywords or weak titles failing to attract clicks" },
+      { icon: Layout, title: "Bad Content Structure", description: "No clear H1/H2/H3 hierarchy confusing users and search engines" },
+      { icon: Search, title: "Keyword Cannibalization", description: "Multiple pages competing for the same keywords" },
+      { icon: Link2, title: "Weak Internal Linking", description: "Pages not benefiting from site-wide authority distribution" },
+      { icon: FileSearch, title: "Missing Schema Markup", description: "No structured data limiting rich snippet opportunities" },
+      { icon: Users, title: "High Bounce Rates", description: "Poor UX signals harming rankings despite good content" }
+    ],
+    process: [
+      { number: "01", title: "Page Audit", description: "Analyze all on-page elements: titles, descriptions, headings, content, images", icon: FileSearch },
+      { number: "02", title: "Keyword Mapping", description: "Assign target keywords to pages based on intent and search volume", icon: Search },
+      { number: "03", title: "Content Optimization", description: "Enhance content quality, depth, readability, and keyword targeting", icon: FileText },
+      { number: "04", title: "HTML Optimization", description: "Perfect title tags, meta descriptions, headings, and image alt text", icon: Layout },
+      { number: "05", title: "Internal Linking", description: "Build strategic internal link structure to distribute authority", icon: Link2 },
+      { number: "06", title: "Schema Implementation", description: "Add relevant structured data for enhanced search appearance", icon: Wrench }
+    ],
+    deliverables: [
+      { category: "HTML Elements", items: ["Optimized title tags", "Compelling meta descriptions", "Proper heading hierarchy", "Image alt text optimization"] },
+      { category: "Content", items: ["Keyword-optimized copy", "Improved readability", "Content depth enhancement", "FAQ sections"] },
+      { category: "Technical Elements", items: ["Internal linking strategy", "URL optimization", "Schema markup", "Canonical tags"] },
+      { category: "Reporting", items: ["Before/after comparison", "Ranking improvements", "CTR improvements", "Traffic growth"] }
+    ],
+    industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Services"],
+    platforms: ["WordPress", "Shopify", "Webflow", "Custom CMS", "Static sites"],
+    platformNote: "On-page SEO works on any platform. Implementation methods vary, but optimization principles remain consistent.",
+    whyChooseMe: [
+      { icon: Search, title: "Semantic SEO Expert", description: "Deep understanding of entity-based optimization and topical relevance" },
+      { icon: FileText, title: "User-Focused", description: "Optimization that improves both rankings and user experience" },
+      { icon: TrendingUp, title: "Data-Driven", description: "Every change backed by keyword research and competitive analysis" },
+      { icon: Layout, title: "Conversion-Aware", description: "Optimize for rankings AND conversions, not just traffic" }
+    ],
+    faqs: [
+      { question: "How long does on-page SEO take?", answer: "Initial optimization of key pages takes 2-4 weeks. Full site optimization depends on site size but typically 1-3 months." },
+      { question: "Will on-page SEO alone improve my rankings?", answer: "On-page is essential but works best combined with technical SEO and link building. For low-competition keywords, on-page alone can rank you." },
+      { question: "How often should I update on-page SEO?", answer: "Review quarterly or when performance drops. Update content annually to maintain freshness and relevance." },
+      { question: "What's the most important on-page element?", answer: "No single element dominates—it's the combination. Title tags, content quality, and user experience signals all matter equally." },
+      { question: "Can I do on-page SEO myself?", answer: "Basic optimization yes, but expert-level semantic SEO, keyword mapping, and schema require deep technical knowledge and experience." }
+    ],
+    relatedServices: ["content-seo", "technical-seo", "keyword-research"]
+  },
+
+  "off-page-seo": {
+    slug: "off-page-seo",
+    name: "Off-Page SEO",
+    primaryKeyword: "off-page SEO services",
+    secondaryKeywords: ["link building", "brand mentions", "social signals", "authority building"],
+    hero: {
+      badge: "SEO Services",
+      headline: "Off-Page SEO That Builds Authority and Trust",
+      description: "Build your site's authority through strategic link acquisition, brand mentions, and reputation management. Earn the trust signals Google uses to rank competitive keywords."
+    },
+    definition: {
+      what: "Off-page SEO encompasses all activities outside your website that influence your rankings—primarily backlinks, brand mentions, social signals, and online reputation.",
+      why: "Off-page SEO builds the external authority and trust signals that tell Google your site deserves to rank. Without it, you can't compete for valuable keywords.",
+      whoFor: "Critical for sites in competitive niches, new sites building initial authority, or established sites trying to outrank stronger competitors."
+    },
+    problems: [
+      { icon: TrendingUp, title: "Low Domain Authority", description: "Weak off-page profile preventing rankings for competitive terms" },
+      { icon: Link2, title: "Few Quality Backlinks", description: "Not enough high-authority sites linking to your content" },
+      { icon: Users, title: "No Brand Recognition", description: "Lack of brand mentions and citations hurting E-E-A-T signals" },
+      { icon: Search, title: "Competitor Dominance", description: "Competitors with stronger off-page profiles outranking you" },
+      { icon: FileText, title: "Toxic Backlinks", description: "Spammy links from previous tactics harming your rankings" },
+      { icon: MapPin, title: "Weak Local Signals", description: "Missing local citations and reviews for local rankings" }
+    ],
+    process: [
+      { number: "01", title: "Authority Audit", description: "Analyze your backlink profile, domain authority, and off-page signals", icon: FileSearch },
+      { number: "02", title: "Competitor Research", description: "Study competitor link profiles and identify acquisition opportunities", icon: Users },
+      { number: "03", title: "Link Strategy", description: "Develop white-hat link building plan targeting high-authority sites", icon: Link2 },
+      { number: "04", title: "Brand Building", description: "Secure brand mentions, PR placements, and thought leadership opportunities", icon: TrendingUp },
+      { number: "05", title: "Reputation Management", description: "Build positive reviews, manage citations, strengthen E-E-A-T signals", icon: FileText },
+      { number: "06", title: "Monitoring", description: "Track new links, mentions, domain authority growth, and ranking impact", icon: Search }
+    ],
+    deliverables: [
+      { category: "Link Acquisition", items: ["High-authority backlinks", "Guest post placements", "Resource page links", "Editorial mentions"] },
+      { category: "Brand Building", items: ["Press mentions", "Industry citations", "Podcast appearances", "Expert roundup features"] },
+      { category: "Reputation", items: ["Review generation", "Citation building", "Social proof", "Testimonial placements"] },
+      { category: "Reporting", items: ["Link acquisition report", "Domain authority tracking", "Brand mention monitoring", "Ranking improvements"] }
+    ],
+    industries: ["All industries", "SaaS", "E-commerce", "B2B", "Professional Services", "Local Business"],
+    whyChooseMe: [
+      { icon: Link2, title: "White-Hat Strategies", description: "100% ethical tactics that build lasting authority without risk" },
+      { icon: TrendingUp, title: "Relationship-Based", description: "Real connections with publishers, journalists, and industry influencers" },
+      { icon: Users, title: "Brand-Focused", description: "Build actual brand authority, not just manipulated link metrics" },
+      { icon: FileText, title: "Full Transparency", description: "Complete disclosure of all off-page activities and results" }
+    ],
+    faqs: [
+      { question: "What's the difference between off-page and link building?", answer: "Link building is part of off-page SEO. Off-page also includes brand mentions, social signals, reviews, and reputation management." },
+      { question: "How long does off-page SEO take?", answer: "Initial activities start immediately, but meaningful authority improvements take 3-6 months as Google processes new trust signals." },
+      { question: "Is off-page SEO risky?", answer: "Only if you use black-hat tactics. White-hat off-page SEO focusing on real relationships and quality is completely safe and sustainable." },
+      { question: "How many backlinks do I need?", answer: "Quality matters more than quantity. Focus on relevance, authority, and natural acquisition patterns rather than hitting a number." },
+      { question: "Can I rank without off-page SEO?", answer: "For very low-competition keywords, yes. For anything competitive, off-page SEO is essential—you can't outrank sites with stronger authority." }
+    ],
+    relatedServices: ["link-building", "local-seo", "content-seo"]
+  },
+
+  "seo-audit": {
+    slug: "seo-audit",
+    name: "SEO Audit",
+    primaryKeyword: "SEO audit services",
+    secondaryKeywords: ["website audit", "SEO analysis", "technical audit", "comprehensive SEO audit"],
+    hero: {
+      badge: "SEO Services",
+      headline: "Comprehensive SEO Audits That Reveal What's Holding You Back",
+      description: "Get a complete diagnosis of your site's SEO health. I identify technical issues, content gaps, and opportunities—prioritized by impact and delivered with actionable fixes."
+    },
+    definition: {
+      what: "An SEO audit is a comprehensive analysis of your website's technical health, content quality, and off-page authority to identify issues preventing optimal search performance.",
+      why: "You can't fix what you don't know is broken. An SEO audit reveals exactly what's preventing your site from ranking and provides a clear roadmap for improvement.",
+      whoFor: "Essential before starting any SEO campaign, when rankings drop unexpectedly, after site migrations, or annually to maintain search performance."
+    },
+    problems: [
+      { icon: Search, title: "Declining Rankings", description: "Rankings dropping but you don't know why or what to fix first" },
+      { icon: Wrench, title: "Unknown Technical Issues", description: "Hidden problems preventing Google from properly crawling or indexing" },
+      { icon: FileText, title: "Content Gaps", description: "Missing topics and keywords competitors are ranking for" },
+      { icon: TrendingUp, title: "Poor ROI", description: "SEO investment not delivering expected results" },
+      { icon: Link2, title: "Penalty Risk", description: "Unsure if your backlink profile or tactics are risky" },
+      { icon: Layout, title: "No Clear Strategy", description: "Don't know what to prioritize or where to start" }
+    ],
+    process: [
+      { number: "01", title: "Technical Crawl", description: "Full site crawl analyzing structure, speed, mobile, indexability, and errors", icon: Wrench },
+      { number: "02", title: "On-Page Analysis", description: "Evaluate titles, content, internal linking, and keyword optimization", icon: FileText },
+      { number: "03", title: "Backlink Audit", description: "Assess link profile quality, toxic links, and authority opportunities", icon: Link2 },
+      { number: "04", title: "Competitor Comparison", description: "Benchmark against top-ranking competitors in your niche", icon: Users },
+      { number: "05", title: "Opportunity Identification", description: "Find quick wins and high-impact improvements for rankings", icon: Search },
+      { number: "06", title: "Roadmap Creation", description: "Deliver prioritized action plan with timeline and expected impact", icon: TrendingUp }
+    ],
+    deliverables: [
+      { category: "Technical Audit", items: ["Full crawl report", "Page speed analysis", "Mobile usability review", "Indexation issues", "Core Web Vitals assessment"] },
+      { category: "Content Audit", items: ["Page-by-page analysis", "Keyword mapping", "Content gap identification", "Thin content report", "Duplicate content issues"] },
+      { category: "Backlink Audit", items: ["Link profile analysis", "Toxic link identification", "Competitor link gaps", "Disavow file (if needed)"] },
+      { category: "Action Plan", items: ["Prioritized fix list", "Implementation roadmap", "Quick win opportunities", "Expected impact estimates"] }
+    ],
+    industries: ["All industries", "SaaS", "E-commerce", "Local Business", "Enterprise", "Professional Services"],
+    platforms: ["WordPress", "Shopify", "Magento", "Webflow", "Wix", "Custom platforms"],
+    platformNote: "SEO audits work for any platform. Analysis identifies platform-specific issues and limitations.",
+    whyChooseMe: [
+      { icon: FileSearch, title: "Comprehensive Coverage", description: "Full technical, on-page, and off-page analysis—nothing missed" },
+      { icon: TrendingUp, title: "Actionable Insights", description: "Clear, prioritized recommendations—not overwhelming data dumps" },
+      { icon: Wrench, title: "Expert Analysis", description: "15+ years of experience interpreting data and identifying root causes" },
+      { icon: FileText, title: "Clear Roadmap", description: "Step-by-step implementation plan with timelines and impact" }
+    ],
+    faqs: [
+      { question: "How long does an SEO audit take?", answer: "Most audits are completed within 1-2 weeks depending on site size. Small sites (under 100 pages) can be audited in 3-5 days." },
+      { question: "What's included in an SEO audit?", answer: "Technical crawl, on-page analysis, content audit, backlink profile review, competitor analysis, and prioritized action plan." },
+      { question: "Do I need an audit if my site is new?", answer: "Yes—catching technical issues early prevents problems as you grow. Pre-launch audits ensure you start with a solid foundation." },
+      { question: "How often should I get an SEO audit?", answer: "Annually for most sites, quarterly for large e-commerce sites, and immediately after major site changes or traffic drops." },
+      { question: "Will you fix the issues or just identify them?", answer: "The audit identifies and prioritizes issues. I can implement fixes as a separate service or provide detailed instructions for your team." }
+    ],
+    relatedServices: ["technical-seo", "on-page-seo", "competitor-analysis"]
+  },
+
+  "keyword-research": {
+    slug: "keyword-research",
+    name: "Keyword Research",
+    primaryKeyword: "keyword research services",
+    secondaryKeywords: ["SEO keyword research", "keyword analysis", "keyword strategy", "search intent analysis"],
+    hero: {
+      badge: "SEO Services",
+      headline: "Keyword Research That Targets What Your Customers Actually Search",
+      description: "Discover high-value keywords with real search volume and buyer intent. I find the terms that drive revenue, not just traffic—and map them to a winning content strategy."
+    },
+    definition: {
+      what: "Keyword research is the strategic process of discovering, analyzing, and selecting search terms that your target audience uses to find products, services, or information.",
+      why: "Targeting the wrong keywords wastes time and money. Proper keyword research ensures you target terms people actually search for with commercial intent and achievable competition.",
+      whoFor: "Essential before starting any SEO campaign, launching new content, or expanding into new markets or product lines."
+    },
+    problems: [
+      { icon: Search, title: "Targeting Wrong Keywords", description: "Ranking for terms that don't drive conversions or revenue" },
+      { icon: Users, title: "No Search Volume", description: "Targeting keywords nobody actually searches for" },
+      { icon: TrendingUp, title: "Too Competitive", description: "Chasing keywords impossible to rank for with your authority" },
+      { icon: FileText, title: "Missing Opportunities", description: "Competitors ranking for valuable terms you haven't targeted" },
+      { icon: Layout, title: "Unclear Search Intent", description: "Content not matching what searchers actually want" },
+      { icon: FileSearch, title: "No Content Strategy", description: "Keywords identified but no plan for implementation" }
+    ],
+    process: [
+      { number: "01", title: "Business Discovery", description: "Understand your products, services, audience, and business goals", icon: Users },
+      { number: "02", title: "Seed Keyword Expansion", description: "Generate comprehensive keyword list from core terms and topics", icon: Search },
+      { number: "03", title: "Search Volume Analysis", description: "Assess real search volume and traffic potential for each term", icon: TrendingUp },
+      { number: "04", title: "Competition Assessment", description: "Evaluate keyword difficulty and ranking feasibility", icon: FileSearch },
+      { number: "05", title: "Intent Classification", description: "Categorize keywords by search intent: informational, commercial, transactional", icon: Layout },
+      { number: "06", title: "Keyword Mapping", description: "Map keywords to pages, content types, and implementation priority", icon: FileText }
+    ],
+    deliverables: [
+      { category: "Keyword List", items: ["500-1000 relevant keywords", "Search volume data", "Competition metrics", "Keyword difficulty scores"] },
+      { category: "Analysis", items: ["Search intent classification", "Opportunity identification", "Quick wins list", "Long-term targets"] },
+      { category: "Strategy", items: ["Keyword-to-page mapping", "Content recommendations", "Priority implementation order", "Topic cluster plan"] },
+      { category: "Tools Access", items: ["Keyword tracking setup", "Search Console configuration", "Rank tracking dashboard"] }
+    ],
+    industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Services"],
+    whyChooseMe: [
+      { icon: Search, title: "Intent-Focused", description: "Prioritize keywords based on business value and search intent, not just volume" },
+      { icon: TrendingUp, title: "Realistic Targets", description: "Identify keywords you can actually rank for based on your authority" },
+      { icon: FileText, title: "Strategic Mapping", description: "Clear implementation plan—not just a spreadsheet of keywords" },
+      { icon: Users, title: "Competitor Insights", description: "Identify gaps in competitor strategies you can exploit" }
+    ],
+    faqs: [
+      { question: "How many keywords should I target?", answer: "Quality over quantity. Start with 20-30 high-value keywords, then expand. Most sites can meaningfully target 100-300 keywords." },
+      { question: "Should I target high-volume or low-volume keywords?", answer: "Both. High-volume for traffic, long-tail for conversions. A balanced strategy targets various volumes based on intent and competition." },
+      { question: "How do you determine keyword difficulty?", answer: "Analyze top 10 results' domain authority, content quality, backlinks, and on-page optimization to assess ranking feasibility." },
+      { question: "Can I do keyword research myself?", answer: "Basic research yes, but expert-level analysis requires experience interpreting data, understanding intent, and assessing true competition—not just tool scores." },
+      { question: "How often should I update keyword research?", answer: "Annually for most businesses, quarterly for rapidly changing industries, and whenever launching new products or entering new markets." }
+    ],
+    relatedServices: ["content-seo", "on-page-seo", "competitor-analysis"]
+  },
+
+  "competitor-analysis": {
+    slug: "competitor-analysis",
+    name: "Competitor Analysis",
+    primaryKeyword: "SEO competitor analysis",
+    secondaryKeywords: ["competitive analysis", "competitor research", "competitor keywords", "backlink gap analysis"],
+    hero: {
+      badge: "SEO Services",
+      headline: "SEO Competitor Analysis That Reveals Your Path to Page 1",
+      description: "See exactly what your competitors are doing to rank. I reverse-engineer their strategies, identify their weaknesses, and create a plan to outrank them."
+    },
+    definition: {
+      what: "SEO competitor analysis is the systematic evaluation of your top-ranking competitors' SEO strategies to identify opportunities, gaps, and tactics you can use to outrank them.",
+      why: "Your competitors are already ranking for valuable keywords. Understanding their strategies reveals proven tactics and opportunities they're missing—your shortcut to page 1.",
+      whoFor: "Essential for entering competitive markets, improving existing rankings, or understanding why competitors consistently outrank you."
+    },
+    problems: [
+      { icon: TrendingUp, title: "Competitors Outranking You", description: "Competitors dominating page 1 for your target keywords" },
+      { icon: Search, title: "Unknown Tactics", description: "Don't know what competitors are doing to rank" },
+      { icon: Link2, title: "Link Gap", description: "Competitors have links from sites you haven't targeted" },
+      { icon: FileText, title: "Content Advantage", description: "Competitors producing content you haven't thought of" },
+      { icon: Layout, title: "Missed Opportunities", description: "Competitors ranking for keywords you didn't know existed" },
+      { icon: Users, title: "No Differentiation", description: "Can't identify unique angles to stand out" }
+    ],
+    process: [
+      { number: "01", title: "Competitor Identification", description: "Identify your true SEO competitors based on keyword overlap", icon: Users },
+      { number: "02", title: "Keyword Gap Analysis", description: "Find keywords competitors rank for that you don't", icon: Search },
+      { number: "03", title: "Backlink Analysis", description: "Analyze competitor link profiles and identify acquisition opportunities", icon: Link2 },
+      { number: "04", title: "Content Audit", description: "Evaluate competitor content depth, topics, and engagement", icon: FileText },
+      { number: "05", title: "Technical Review", description: "Assess competitor site speed, structure, and technical advantages", icon: Wrench },
+      { number: "06", title: "Strategy Development", description: "Create action plan to close gaps and exploit weaknesses", icon: TrendingUp }
+    ],
+    deliverables: [
+      { category: "Competitor Profiles", items: ["3-5 competitor deep-dives", "Traffic estimates", "Top ranking keywords", "Domain authority metrics"] },
+      { category: "Gap Analysis", items: ["Keyword opportunities", "Content gaps", "Backlink opportunities", "Technical advantages/disadvantages"] },
+      { category: "Strategy Report", items: ["Actionable recommendations", "Quick wins identification", "Competitive differentiation angles", "Implementation priorities"] },
+      { category: "Ongoing Monitoring", items: ["Competitor rank tracking", "New content alerts", "Backlink monitoring", "Strategy shift notifications"] }
+    ],
+    industries: ["All industries", "SaaS", "E-commerce", "Local Business", "B2B", "Professional Services"],
+    whyChooseMe: [
+      { icon: Users, title: "True Competitor Focus", description: "Analyze actual SEO competitors, not just business competitors" },
+      { icon: Search, title: "Actionable Intelligence", description: "Clear opportunities and tactics you can implement, not just data" },
+      { icon: TrendingUp, title: "Weakness Exploitation", description: "Identify gaps in competitor strategies you can capitalize on" },
+      { icon: FileText, title: "Ongoing Monitoring", description: "Track competitor changes and adapt strategy proactively" }
+    ],
+    faqs: [
+      { question: "How many competitors should I analyze?", answer: "3-5 direct SEO competitors is optimal. More than that dilutes focus; fewer misses important patterns." },
+      { question: "How is SEO competitor different from business competitor?", answer: "Business competitors may not be your SEO competitors. I analyze sites actually ranking for your target keywords, even if they're not direct business rivals." },
+      { question: "Can I see my competitors' exact strategy?", answer: "Not exact—but I can reverse-engineer their tactics: keywords they target, content they create, links they build, and technical optimizations they use." },
+      { question: "How often should I do competitor analysis?", answer: "Initial deep-dive once, then quarterly check-ins to monitor changes. Immediate re-analysis if a competitor suddenly starts outranking you." },
+      { question: "Will copying competitors guarantee rankings?", answer: "No—but understanding what works plus adding your unique value creates a winning strategy. I identify tactics to replicate and opportunities to differentiate." }
+    ],
+    relatedServices: ["keyword-research", "link-building", "content-seo"]
   }
+};
 
 export const servicesList = [
   "technical-seo",
