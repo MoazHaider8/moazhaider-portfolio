@@ -12,8 +12,7 @@ const fadeUp = {
     opacity: 1, 
     y: 0,
     transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1]
+      duration: 0.5
     }
   }
 };
@@ -34,8 +33,7 @@ const scaleIn = {
     opacity: 1, 
     scale: 1,
     transition: {
-      duration: 0.5,
-      ease: [0.22, 1, 0.36, 1]
+      duration: 0.5
     }
   }
 };
@@ -69,8 +67,7 @@ export default function ServiceProblems({ service }: Props) {
         }}
         transition={{
           duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
+          repeat: Infinity
         }}
         className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-red-400/30 to-orange-400/30 dark:from-red-600/20 dark:to-orange-600/20 rounded-full blur-3xl"
       />
@@ -82,7 +79,6 @@ export default function ServiceProblems({ service }: Props) {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: "easeInOut",
           delay: 2
         }}
         className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-orange-400/30 to-red-400/30 dark:from-orange-600/20 dark:to-red-600/20 rounded-full blur-3xl"
@@ -224,8 +220,7 @@ function ProblemCard({ problem, IconComponent, gradient, index }: ProblemCardPro
               }}
               transition={{
                 duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
+                repeat: Infinity
               }}
             />
           </div>
