@@ -105,6 +105,7 @@ export interface ServiceDetail {
     title: string;
     description: string;
   }>;
+  serviceInsights?: string[];
   countriesServed?: {
     description: string;
     regions: Array<{
@@ -594,6 +595,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "Search", title: "Google Best Practices", description: "Adherence to official Google guidelines and Search Central documentation" },
       { icon: "FileText", title: "Transparent Reporting", description: "Clear documentation of all issues found and fixes implemented" }
     ],
+    serviceInsights: [
+      "Core Web Vitals optimization is now a confirmed ranking factor affecting 15-20% of search results",
+      "Mobile-first indexing means your mobile site speed directly determines your desktop rankings",
+      "90% of technical issues can be identified and fixed within the first 30 days"
+    ],
     faqs: [
       { question: "How long does technical SEO take?", answer: "Initial audit and priority fixes typically take 2-4 weeks. Ongoing optimization is continuous as search engines and your site evolve." },
       { question: "Will technical SEO improve my rankings?", answer: "Yes—fixing technical issues removes barriers preventing Google from properly crawling, indexing, and ranking your content. Most sites see measurable improvements within 30-60 days." },
@@ -910,6 +916,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "Users", title: "White-Hat Only", description: "No fake reviews, spam, or black-hat tactics that risk penalties" },
       { icon: "TrendingUp", title: "Conversion-Focused", description: "Focus on rankings that drive calls, visits, and revenue—not vanity metrics" },
       { icon: "FileText", title: "Transparent Reporting", description: "Monthly reports showing rankings, visibility, calls, and ROI" }
+    ],
+    serviceInsights: [
+      "Google Business Profile optimization drives 76% of all local search clicks",
+      "NAP consistency across 50+ directories matters more than traditional backlinks for local pack rankings",
+      "Review velocity (rate of new reviews) impacts rankings more than total review count"
     ],
     faqs: [
       { question: "How long does local SEO take to work?", answer: "You'll see initial improvements within 4-8 weeks. Full local pack dominance typically takes 3-6 months depending on competition." },
@@ -1286,6 +1297,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "TrendingUp", title: "Platform Expertise", description: "Deep experience with all major e-commerce platforms and their SEO limitations" },
       { icon: "FileText", title: "Conversion Optimization", description: "SEO strategies that improve rankings AND product conversion rates" },
       { icon: "Search", title: "Competitive Analysis", description: "Identify gaps in competitor strategies and capitalize on opportunities" }
+    ],
+    serviceInsights: [
+      "Product schema markup increases click-through rates by 20-30% in search results",
+      "Category page SEO often drives 3x more revenue than individual product page optimization",
+      "Faceted navigation must be crawl-optimized or it creates thousands of duplicate content issues"
     ],
     faqs: [
       { question: "How long does e-commerce SEO take?", answer: "Initial improvements appear within 2-3 months. Full category and product dominance takes 6-12 months depending on competition and catalog size." },
@@ -1667,6 +1683,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "Search", title: "Intent-Focused", description: "Content mapped to precise search intent for maximum relevance" },
       { icon: "Users", title: "Conversion-Driven", description: "Content that ranks AND converts visitors into customers" },
       { icon: "TrendingUp", title: "Data-Backed", description: "Every content decision backed by keyword research and competitor analysis" }
+    ],
+    serviceInsights: [
+      "Google's EEAT (Experience, Expertise, Authoritativeness, Trust) signals are critical for YMYL topics",
+      "Topical authority clusters outperform standalone content by 40-60% in competitive niches",
+      "Content refresh strategies boost rankings faster than publishing new content in established sites"
     ],
     faqs: [
       { question: "How many blog posts do I need?", answer: "Quality over quantity. Start with 10-15 high-quality pieces targeting your most valuable keywords, then scale based on performance." },
@@ -2119,6 +2140,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "TrendingUp", title: "Quality Over Quantity", description: "Focus on high-authority, relevant links that move the needle" },
       { icon: "Users", title: "Relationship-Based", description: "Build real relationships with editors and site owners for sustainable links" },
       { icon: "FileText", title: "Transparent Reporting", description: "Full disclosure of every link acquired with metrics and proof" }
+    ],
+    serviceInsights: [
+      "Link quality (Domain Authority, relevance, traffic) matters 10x more than link quantity",
+      "Editorial links from DR50+ sites provide more value than 100 directory links",
+      "Link velocity patterns matter—sudden spikes trigger Google's spam filters"
     ],
     faqs: [
       { question: "How many links do I need?", answer: "Quality matters more than quantity. 5-10 high-authority links often outperform 100 low-quality links. Strategy depends on your competition." },
@@ -2573,6 +2599,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "FileText", title: "User-Focused", description: "Optimization that improves both rankings and user experience" },
       { icon: "TrendingUp", title: "Data-Driven", description: "Every change backed by keyword research and competitive analysis" },
       { icon: "Layout", title: "Conversion-Aware", description: "Optimize for rankings AND conversions, not just traffic" }
+    ],
+    serviceInsights: [
+      "Semantic SEO and entity optimization now outperform exact-match keyword targeting",
+      "Internal linking distributes 85% of PageRank—it's your most underutilized ranking factor",
+      "Title tag CTR optimization can increase organic traffic by 20-40% without ranking changes"
     ],
     faqs: [
       { question: "How long does on-page SEO take?", answer: "Initial optimization of key pages takes 2-4 weeks. Full site optimization depends on site size but typically 1-3 months." },
@@ -3055,6 +3086,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "TrendingUp", title: "Relationship-Based", description: "Real connections with publishers, journalists, and industry influencers" },
       { icon: "Users", title: "Brand-Focused", description: "Build actual brand authority, not just manipulated link metrics" },
       { icon: "FileText", title: "Full Transparency", description: "Complete disclosure of all off-page activities and results" }
+    ],
+    serviceInsights: [
+      "Brand mentions (even without links) are now ranking signals—Google tracks co-citations",
+      "Digital PR generates 5-10x more branded search volume than traditional link building",
+      "Social signals correlate with rankings but don't cause them—use social for amplification, not SEO"
     ],
     faqs: [
       { question: "What's the difference between off-page and link building?", answer: "Link building is part of off-page SEO. Off-page also includes brand mentions, social signals, reviews, and reputation management." },
@@ -3540,6 +3576,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "Wrench", title: "Expert Analysis", description: "15+ years of experience interpreting data and identifying root causes" },
       { icon: "FileText", title: "Clear Roadmap", description: "Step-by-step implementation plan with timelines and impact" }
     ],
+    serviceInsights: [
+      "97% of audits uncover critical issues in the first 3 categories: crawlability, indexability, and site speed",
+      "Competitive gap analysis reveals quick-win opportunities that can rank in 30-60 days",
+      "Prioritization matters more than comprehensiveness—focus on the 20% of fixes that drive 80% of results"
+    ],
     faqs: [
       { question: "How long does an SEO audit take?", answer: "Most audits are completed within 1-2 weeks depending on site size. Small sites (under 100 pages) can be audited in 3-5 days." },
       { question: "What's included in an SEO audit?", answer: "Technical crawl, on-page analysis, content audit, backlink profile review, competitor analysis, and prioritized action plan." },
@@ -3997,6 +4038,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "FileText", title: "Strategic Mapping", description: "Clear implementation plan—not just a spreadsheet of keywords" },
       { icon: "Users", title: "Competitor Insights", description: "Identify gaps in competitor strategies you can exploit" }
     ],
+    serviceInsights: [
+      "Search intent classification (informational, commercial, transactional, navigational) is more important than search volume",
+      "Long-tail keywords (3+ words) convert 2.5x better than short-tail despite lower volume",
+      "Keyword difficulty scores are misleading—look at SERP analysis and competitor content quality instead"
+    ],
     faqs: [
       { question: "How many keywords should I target?", answer: "Quality over quantity. Start with 20-30 high-value keywords, then expand. Most sites can meaningfully target 100-300 keywords." },
       { question: "Should I target high-volume or low-volume keywords?", answer: "Both. High-volume for traffic, long-tail for conversions. A balanced strategy targets various volumes based on intent and competition." },
@@ -4453,6 +4499,11 @@ export const servicesData: Record<string, ServiceDetail> = {
       { icon: "Search", title: "Actionable Intelligence", description: "Clear opportunities and tactics you can implement, not just data" },
       { icon: "TrendingUp", title: "Weakness Exploitation", description: "Identify gaps in competitor strategies you can capitalize on" },
       { icon: "FileText", title: "Ongoing Monitoring", description: "Track competitor changes and adapt strategy proactively" }
+    ],
+    serviceInsights: [
+      "Content gap analysis reveals keywords competitors rank for that you don't—often the fastest path to growth",
+      "Backlink gap analysis shows link opportunities your competitors have captured that you're missing",
+      "Reverse-engineering competitor strategies is 3x faster than building from scratch in competitive markets"
     ],
     faqs: [
       { question: "How many competitors should I analyze?", answer: "3-5 direct SEO competitors is optimal. More than that dilutes focus; fewer misses important patterns." },
