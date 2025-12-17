@@ -12,7 +12,7 @@ export default function ContactHero() {
   ];
 
   return (
-    <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+    <section className="relative pt-24 pb-16 overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
       {/* Gradient Orb */}
       <motion.div
         animate={{
