@@ -3,6 +3,13 @@ import { Mail, Phone, Linkedin, Facebook, Twitter, Instagram } from "lucide-reac
 import { contactInfo } from "@/lib/data";
 
 export default function Footer() {
+  const companyLinks = [
+    { name: "About", href: "/about" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Contact", href: "/contact" },
+    { name: "Services", href: "/services" },
+  ];
+
   const serviceLinks = [
     { name: "Technical SEO", href: "/services/technical-seo" },
     { name: "Local SEO", href: "/services/local-seo" },
@@ -36,9 +43,9 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
               Moaz Haider
             </h3>
@@ -61,6 +68,25 @@ export default function Footer() {
                 {contactInfo.email}
               </a>
             </div>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-4">
+              Company
+            </h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Services */}

@@ -65,8 +65,8 @@ export default function Header() {
   const mainNav = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Case Studies", href: "#case-studies" },
-    { name: "Contact", href: "#contact" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
