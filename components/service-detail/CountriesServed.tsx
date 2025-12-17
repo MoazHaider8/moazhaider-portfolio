@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function CountriesServed({ service }: Props) {
+  if (!service.countriesServed) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-white via-cyan-50/30 to-blue-50/30 dark:from-gray-950 dark:via-cyan-950/20 dark:to-blue-950/20 overflow-hidden">
       {/* Background Decorations */}

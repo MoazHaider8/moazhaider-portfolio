@@ -25,6 +25,8 @@ interface Props {
 }
 
 export default function ServiceFramework({ service }: Props) {
+  if (!service.framework) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-gray-50 via-blue-50/30 to-purple-50/30 dark:from-gray-900 dark:via-blue-950/20 dark:to-purple-950/20 overflow-hidden">
       {/* Decorative Elements */}
@@ -124,7 +126,7 @@ export default function ServiceFramework({ service }: Props) {
                 </div>
 
                 {/* Connecting Lines for Visual Flow */}
-                {idx < service.framework.pillars.length - 1 && (
+                {service.framework && idx < service.framework.pillars.length - 1 && (
                   <div className="hidden md:block absolute -bottom-4 left-1/2 w-px h-8 bg-gradient-to-b from-gray-300 to-transparent dark:from-gray-600"></div>
                 )}
               </motion.div>

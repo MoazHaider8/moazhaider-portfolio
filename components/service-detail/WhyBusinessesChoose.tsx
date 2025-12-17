@@ -29,6 +29,8 @@ interface Props {
 }
 
 export default function WhyBusinessesChoose({ service }: Props) {
+  if (!service.whyBusinessesChoose) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-gray-900 via-indigo-950 to-purple-950 dark:from-black dark:via-gray-950 dark:to-indigo-950 overflow-hidden">
       {/* Animated Background Elements */}

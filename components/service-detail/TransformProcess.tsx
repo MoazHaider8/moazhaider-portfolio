@@ -25,6 +25,8 @@ interface Props {
 }
 
 export default function TransformProcess({ service }: Props) {
+  if (!service.transformProcess) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-gray-950 dark:via-indigo-950/20 dark:to-purple-950/20 overflow-hidden">
       {/* Background Decorations */}

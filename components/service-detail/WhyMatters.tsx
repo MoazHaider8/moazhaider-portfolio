@@ -10,6 +10,8 @@ interface Props {
 }
 
 export default function WhyMatters({ service }: Props) {
+  if (!service.whyMatters) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-gray-900 via-indigo-950 to-purple-950 dark:from-black dark:via-indigo-950 dark:to-purple-950 overflow-hidden">
       {/* Background Elements */}

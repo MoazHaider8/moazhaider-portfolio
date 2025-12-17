@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function ComprehensiveServices({ service }: Props) {
+  if (!service.comprehensiveServices) return null;
+
   return (
     <section className="relative py-28 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

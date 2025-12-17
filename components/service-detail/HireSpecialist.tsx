@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function HireSpecialist({ service }: Props) {
+  if (!service.hireSpecialist) return null;
+
   return (
     <section className="relative py-24 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-700 dark:via-purple-700 dark:to-pink-700 overflow-hidden">
       {/* Animated Background Pattern */}

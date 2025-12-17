@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function HowItWorks({ service }: Props) {
+  if (!service.howItWorks) return null;
+
   return (
     <section className="relative py-28 bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
