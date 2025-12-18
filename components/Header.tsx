@@ -53,14 +53,14 @@ export default function Header() {
 
   const industries = [
     { name: "All Industries", href: "/industries" },
-    { name: "Appliance Repair", href: "/industries/appliance-repair" },
-    { name: "Carpet Cleaning", href: "/industries/carpet-cleaning" },
-    { name: "Gutter Installation & Maintenance", href: "/industries/gutter-installation" },
-    { name: "Plumbing Services", href: "/industries/plumbing-services" },
-    { name: "Siding Services", href: "/industries/siding-services" },
-    { name: "Bathroom Remodeling", href: "/industries/bathroom-remodeling" },
-    { name: "Dumpster Rental", href: "/industries/dumpster-rental" },
-    { name: "Home Security Systems", href: "/industries/home-security" },
+    { name: "Appliance Repair", href: "/industries/appliance-repair-seo" },
+    { name: "Carpet Cleaning", href: "/industries/carpet-cleaning-seo" },
+    { name: "Gutter Installation & Maintenance", href: "/industries/gutter-installation-seo" },
+    { name: "Plumbing Services", href: "/industries/plumbing-seo" },
+    { name: "Siding Services", href: "/industries/siding-seo" },
+    { name: "Bathroom Remodeling", href: "/industries/bathroom-remodeling-seo" },
+    { name: "Dumpster Rental", href: "/industries/dumpster-rental-seo" },
+    { name: "Home Security Systems", href: "/industries/home-security-seo" },
   ];
 
   const mainNav = [

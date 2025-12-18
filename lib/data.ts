@@ -200,7 +200,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Drive more local service calls with map pack visibility",
-    link: "/industries/appliance-repair",
+    link: "/industries/appliance-repair-seo",
   },
   {
     id: "2",
@@ -209,7 +209,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Increase booking rates through local search dominance",
-    link: "/industries/carpet-cleaning",
+    link: "/industries/carpet-cleaning-seo",
   },
   {
     id: "3",
@@ -218,7 +218,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Generate qualified leads through seasonal SEO strategies",
-    link: "/industries/gutter-installation",
+    link: "/industries/gutter-installation-seo",
   },
   {
     id: "4",
@@ -227,7 +227,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Dominate emergency plumbing searches in your service area",
-    link: "/industries/plumbing",
+    link: "/industries/plumbing-seo",
   },
   {
     id: "5",
@@ -236,7 +236,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Capture home improvement leads with technical + local SEO",
-    link: "/industries/siding",
+    link: "/industries/siding-seo",
   },
   {
     id: "6",
@@ -245,7 +245,7 @@ export const industries: Industry[] = [
     cluster: "Remodeling",
     relatedService: "Local SEO + Content SEO",
     description: "Convert high-value remodeling leads through content authority",
-    link: "/industries/bathroom-remodeling",
+    link: "/industries/bathroom-remodeling-seo",
   },
   {
     id: "7",
@@ -254,7 +254,7 @@ export const industries: Industry[] = [
     cluster: "Remodeling",
     relatedService: "Local SEO + Content SEO",
     description: "Win premium remodeling projects with strategic SEO",
-    link: "/industries/kitchen-remodeling",
+    link: "/industries/kitchen-remodeling-seo",
   },
   {
     id: "8",
@@ -263,7 +263,7 @@ export const industries: Industry[] = [
     cluster: "Remodeling",
     relatedService: "Local SEO + E-commerce SEO",
     description: "Drive showroom visits and online flooring sales",
-    link: "/industries/flooring",
+    link: "/industries/flooring-seo",
   },
   {
     id: "9",
@@ -272,7 +272,7 @@ export const industries: Industry[] = [
     cluster: "Remodeling",
     relatedService: "Content SEO",
     description: "Educate buyers and generate qualified accessibility leads",
-    link: "/industries/walk-in-tubs",
+    link: "/industries/walk-in-tubs-seo",
   },
   {
     id: "10",
@@ -281,7 +281,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Increase same-day rental bookings through local search",
-    link: "/industries/dumpster-rental",
+    link: "/industries/dumpster-rental-seo",
   },
   {
     id: "11",
@@ -290,7 +290,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Content SEO + Local SEO",
     description: "Build trust and authority in the security installation market",
-    link: "/industries/home-security",
+    link: "/industries/home-security-seo",
   },
   {
     id: "12",
@@ -299,7 +299,7 @@ export const industries: Industry[] = [
     cluster: "Restoration",
     relatedService: "Local SEO + Technical SEO",
     description: "Respond to urgent mold removal searches in your area",
-    link: "/industries/mold-remediation",
+    link: "/industries/mold-remediation-seo",
   },
   {
     id: "13",
@@ -308,7 +308,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Capture emergency and scheduled electrical service calls",
-    link: "/industries/electrician",
+    link: "/industries/electrician-seo",
   },
   {
     id: "14",
@@ -317,7 +317,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO + Content SEO",
     description: "Dominate seasonal HVAC searches and maintenance contracts",
-    link: "/industries/hvac",
+    link: "/industries/hvac-seo",
   },
   {
     id: "15",
@@ -326,7 +326,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Win high-value roofing projects through local visibility",
-    link: "/industries/roofing-contractor",
+    link: "/industries/roofing-seo",
   },
   {
     id: "16",
@@ -335,7 +335,7 @@ export const industries: Industry[] = [
     cluster: "Restoration",
     relatedService: "Local SEO",
     description: "Respond to emergency water damage calls first",
-    link: "/industries/water-damage-restoration",
+    link: "/industries/water-damage-restoration-seo",
   },
   {
     id: "17",
@@ -344,7 +344,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Increase same-day repair bookings with local SEO",
-    link: "/industries/garage-door-repair",
+    link: "/industries/garage-door-repair-seo",
   },
   {
     id: "18",
@@ -353,7 +353,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO + Content SEO",
     description: "Generate recurring service contracts through SEO",
-    link: "/industries/pest-control",
+    link: "/industries/pest-control-seo",
   },
   {
     id: "19",
@@ -362,7 +362,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Fill storage units through local search visibility",
-    link: "/industries/self-storage",
+    link: "/industries/self-storage-seo",
   },
   {
     id: "20",
@@ -371,7 +371,7 @@ export const industries: Industry[] = [
     cluster: "Restoration",
     relatedService: "Local SEO",
     description: "Capture emergency fire restoration leads immediately",
-    link: "/industries/fire-damage-restoration",
+    link: "/industries/fire-damage-restoration-seo",
   },
   {
     id: "21",
@@ -380,7 +380,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Local SEO + Content SEO + Technical SEO",
     description: "Build patient trust and medical authority online",
-    link: "/industries/healthcare",
+    link: "/industries/healthcare-seo",
   },
   {
     id: "22",
@@ -389,7 +389,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Local SEO + Content SEO",
     description: "Attract high-value legal clients through search",
-    link: "/industries/law-firm",
+    link: "/industries/law-firm-seo",
   },
   {
     id: "23",
@@ -398,7 +398,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Local SEO + Content SEO",
     description: "Generate qualified buyer and seller leads",
-    link: "/industries/real-estate",
+    link: "/industries/real-estate-seo",
   },
   {
     id: "24",
@@ -407,7 +407,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Content SEO + Technical SEO",
     description: "Drive product signups through organic search",
-    link: "/industries/saas",
+    link: "/industries/saas-seo",
   },
   {
     id: "25",
@@ -416,7 +416,7 @@ export const industries: Industry[] = [
     cluster: "Home Services",
     relatedService: "Local SEO",
     description: "Comprehensive local SEO for all home service businesses",
-    link: "/industries/home-services",
+    link: "/industries/home-services-seo",
   },
   {
     id: "26",
@@ -425,7 +425,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Content SEO + Technical SEO",
     description: "Generate enterprise leads through thought leadership",
-    link: "/industries/b2b",
+    link: "/industries/b2b-seo",
   },
   {
     id: "27",
@@ -434,7 +434,7 @@ export const industries: Industry[] = [
     cluster: "Professional",
     relatedService: "Local SEO + Content SEO",
     description: "Fill your appointment calendar with new patients",
-    link: "/industries/dental",
+    link: "/industries/dental-seo",
   },
 ];
 
