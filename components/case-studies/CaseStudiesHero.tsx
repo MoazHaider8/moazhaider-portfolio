@@ -235,7 +235,6 @@ export default function CaseStudiesHero() {
           </motion.div>
         </div>
       </div>
-      </div>
     </section>
   );
 }
