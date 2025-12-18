@@ -27,10 +27,10 @@ export default function Footer() {
   ];
 
   const platformLinks = [
-    { name: "WordPress SEO", href: "/platforms/wordpress" },
-    { name: "Shopify SEO", href: "/platforms/shopify" },
-    { name: "Webflow SEO", href: "/platforms/webflow" },
-    { name: "Wix SEO", href: "/platforms/wix" },
+    { name: "WordPress SEO", href: "/cms/wordpress-seo" },
+    { name: "Shopify SEO", href: "/cms/shopify-seo" },
+    { name: "Webflow SEO", href: "/cms/webflow-seo" },
+    { name: "Wix SEO", href: "/cms/wix-seo" },
   ];
 
   const locationLinks = [

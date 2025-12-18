@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -23,49 +24,57 @@ const platforms = [
     name: "WordPress",
     description: "Complete WordPress SEO optimization including speed, schema, and content structure",
     gradient: "from-blue-600 to-blue-800",
-    logo: "W"
+    logo: "W",
+    href: "/cms/wordpress-seo"
   },
   {
     name: "Shopify",
     description: "E-commerce SEO for Shopify stores to rank products and increase sales",
     gradient: "from-green-600 to-green-800",
-    logo: "S"
+    logo: "S",
+    href: "/cms/shopify-seo"
   },
   {
     name: "Wix",
     description: "Expert Wix SEO services to overcome platform limitations and improve rankings",
     gradient: "from-purple-600 to-purple-800",
-    logo: "W"
+    logo: "W",
+    href: "/cms/wix-seo"
   },
   {
     name: "Squarespace",
     description: "Professional Squarespace SEO to maximize your site's search visibility",
     gradient: "from-gray-700 to-gray-900",
-    logo: "SQ"
+    logo: "SQ",
+    href: "/cms/squarespace-seo"
   },
   {
     name: "Magento",
     description: "Advanced Magento SEO for large-scale e-commerce operations",
     gradient: "from-orange-600 to-red-600",
-    logo: "M"
+    logo: "M",
+    href: "/cms/magento-seo"
   },
   {
     name: "Webflow",
     description: "Technical Webflow SEO optimization for modern websites",
     gradient: "from-cyan-600 to-blue-600",
-    logo: "WF"
+    logo: "WF",
+    href: "/cms/webflow-seo"
   },
   {
     name: "BigCommerce",
     description: "Comprehensive BigCommerce SEO to drive organic e-commerce growth",
     gradient: "from-indigo-600 to-purple-600",
-    logo: "BC"
+    logo: "BC",
+    href: "/cms"
   },
   {
     name: "Custom CMS",
     description: "Tailored SEO solutions for custom-built websites and applications",
     gradient: "from-pink-600 to-rose-600",
-    logo: "C"
+    logo: "C",
+    href: "/cms"
   }
 ];
 
@@ -102,17 +111,20 @@ export default function PlatformsGrid() {
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {platforms.map((platform, idx) => (
-            <motion.div
+            <Link
               key={idx}
-              variants={fadeUp}
-              whileHover={{ 
-                y: -8,
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              className="group cursor-pointer"
+              href={platform.href}
             >
-              <div className="glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
+              <motion.div
+                variants={fadeUp}
+                whileHover={{ 
+                  y: -8,
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+                className="group cursor-pointer"
+              >
+                <div className="glass-card rounded-2xl p-6 h-full transition-all duration-300 hover:shadow-2xl relative overflow-hidden">
                 {/* Animated gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${platform.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
@@ -143,6 +155,7 @@ export default function PlatformsGrid() {
                 </div>
               </div>
             </motion.div>
+            </Link>
           ))}
         </motion.div>
 

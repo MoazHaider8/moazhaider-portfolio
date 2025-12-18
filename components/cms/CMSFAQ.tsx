@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function CMSFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -10,18 +11,27 @@ export default function CMSFAQ() {
   const faqs = [
     {
       question: "What is CMS-specific SEO?",
-      answer:
-        "CMS-specific SEO is search engine optimization tailored to the unique technical architecture, limitations, and capabilities of a specific content management system. Each CMS (WordPress, Shopify, Wix, etc.) has different SEO challenges that require platform-specific expertise to solve effectively.",
+      answer: (
+        <>
+          CMS-specific SEO is search engine optimization tailored to the unique technical architecture, limitations, and capabilities of a specific content management system. Each CMS (<Link href="/cms/wordpress-seo" className="text-purple-600 dark:text-purple-400 hover:underline">WordPress</Link>, <Link href="/cms/shopify-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Shopify</Link>, <Link href="/cms/wix-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Wix</Link>, etc.) has different SEO challenges that require platform-specific expertise to solve effectively.
+        </>
+      ),
     },
     {
       question: "Why does my CMS matter for SEO?",
-      answer:
-        "Different CMS platforms have different SEO strengths and weaknesses. WordPress has plugin conflicts and index bloat. Shopify has duplicate product URLs. Wix has limited technical control. Each platform requires specialized knowledge to optimize properly. Generic SEO advice often fails because it doesn't account for platform-specific constraints.",
+      answer: (
+        <>
+          Different CMS platforms have different SEO strengths and weaknesses. <Link href="/cms/wordpress-seo" className="text-purple-600 dark:text-purple-400 hover:underline">WordPress</Link> has plugin conflicts and index bloat. <Link href="/cms/shopify-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Shopify</Link> has duplicate product URLs. <Link href="/cms/wix-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Wix</Link> has limited technical control. Each platform requires specialized knowledge to optimize properly. Generic SEO advice often fails because it doesn't account for platform-specific constraints.
+        </>
+      ),
     },
     {
       question: "Which CMS is best for SEO?",
-      answer:
-        "No single CMS is universally 'best' for SEO. WordPress offers the most flexibility and control. Shopify is excellent for e-commerce with proper optimization. Webflow produces clean code. The 'best' CMS depends on your business needs, technical resources, and SEO goals. Any major CMS can rank well with proper optimization.",
+      answer: (
+        <>
+          No single CMS is universally 'best' for SEO. <Link href="/cms/wordpress-seo" className="text-purple-600 dark:text-purple-400 hover:underline">WordPress</Link> offers the most flexibility and control. <Link href="/cms/shopify-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Shopify</Link> is excellent for e-commerce with proper optimization. <Link href="/cms/webflow-seo" className="text-purple-600 dark:text-purple-400 hover:underline">Webflow</Link> produces clean code. The 'best' CMS depends on your business needs, technical resources, and SEO goals. Any major CMS can rank well with proper optimization.
+        </>
+      ),
     },
     {
       question: "Can you migrate my site to a different CMS?",
