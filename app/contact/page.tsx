@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import ContactHero from "@/components/contact/ContactHero";
-import ContactForm from "@/components/contact/ContactForm";
 import DirectContact from "@/components/contact/DirectContact";
 import WhatHappensNext from "@/components/contact/WhatHappensNext";
 import ContactFAQ from "@/components/contact/ContactFAQ";
@@ -118,11 +117,8 @@ export default function ContactPage() {
       />
 
       <main className="min-h-screen">
-        {/* Hero Section */}
+        {/* Hero Section with Contact Form */}
         <ContactHero />
-
-        {/* Contact Form Section */}
-        <ContactForm />
 
         {/* Direct Contact Options */}
         <DirectContact />
