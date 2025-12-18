@@ -2,14 +2,14 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Wordpress, ShoppingBag, Layout, Box, Code, Database, Layers, FileCode } from "lucide-react";
+import { ArrowRight, Blocks, ShoppingBag, Layout, Box, Code, Database, Layers, FileCode } from "lucide-react";
 
 export default function CMSPlatformsGrid() {
   const platforms = [
     {
       name: "WordPress",
       slug: "wordpress-seo",
-      icon: Wordpress,
+      icon: Blocks,
       tagline: "Fix plugin conflicts & index bloat",
       color: "from-blue-600 to-blue-800",
       popular: true,

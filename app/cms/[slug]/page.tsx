@@ -140,7 +140,7 @@ export default function CMSSubpage({ params }: { params: { slug: string } }) {
 
       <main className="min-h-screen">
         <CMSSubpageHero data={cmsData} />
-        <WhatMakesDifferent data={cmsData} />
+        <WhatMakesDifferent data={cmsData.whatMakesDifferent} />
         <CommonProblems problems={cmsData.commonProblems} cmsName={cmsData.name} />
         <MyApproach steps={cmsData.myApproach} cmsName={cmsData.name} />
         <WhatsIncluded deliverables={cmsData.whatsIncluded} cmsName={cmsData.name} />
