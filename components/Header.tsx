@@ -40,6 +40,7 @@ export default function Header() {
   ];
 
   const cmsPlatforms = [
+    { name: "All CMS", href: "/cms" },
     { name: "WordPress SEO", href: "/cms/wordpress-seo" },
     { name: "Shopify SEO", href: "/cms/shopify-seo" },
     { name: "Wix SEO", href: "/cms/wix-seo" },
