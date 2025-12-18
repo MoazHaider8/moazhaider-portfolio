@@ -11,6 +11,7 @@ import WhySEOMatters from "@/components/services/WhySEOMatters";
 import SEOSuccessStrategy from "@/components/services/SEOSuccessStrategy";
 import ToolsStack from "@/components/services/ToolsStack";
 import FinalCTA from "@/components/services/FinalCTA";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export const metadata = {
   title: "Professional SEO Services | Moaz Haider - Expert SEO Consultant",
@@ -94,6 +95,7 @@ export default function ServicesPage() {
         <WhySEOMatters />
         <SEOSuccessStrategy />
         <ToolsStack />
+        <FreeAuditForm />
         <FinalCTA />
       </LayoutWrapper>
     </>

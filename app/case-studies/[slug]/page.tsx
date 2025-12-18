@@ -10,6 +10,7 @@ import Results from "@/components/case-study-detail/Results";
 import ToolsTech from "@/components/case-study-detail/ToolsTech";
 import RelatedCaseStudies from "@/components/case-study-detail/RelatedCaseStudies";
 import FinalCTADetail from "@/components/case-study-detail/FinalCTADetail";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export function generateStaticParams() {
   return caseStudies.map((cs) => ({
@@ -135,6 +136,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       <Results caseStudy={caseStudy} />
       <ToolsTech caseStudy={caseStudy} />
       <RelatedCaseStudies currentSlug={caseStudy.slug} industry={caseStudy.industry} />
+      <FreeAuditForm />
       <FinalCTADetail />
     </>
   );

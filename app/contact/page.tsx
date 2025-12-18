@@ -5,6 +5,7 @@ import DirectContact from "@/components/contact/DirectContact";
 import WhatHappensNext from "@/components/contact/WhatHappensNext";
 import ContactFAQ from "@/components/contact/ContactFAQ";
 import TrustReinforcement from "@/components/contact/TrustReinforcement";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export const metadata: Metadata = {
   title: "Contact Moaz Haider – Get Your Free SEO Consultation",
@@ -131,6 +132,9 @@ export default function ContactPage() {
 
         {/* FAQ Section */}
         <ContactFAQ />
+
+        {/* Free SEO Audit Form */}
+        <FreeAuditForm />
 
         {/* Trust Reinforcement */}
         <TrustReinforcement />

@@ -10,6 +10,7 @@ import WorkingWithMe from "@/components/about/WorkingWithMe";
 import Differentiators from "@/components/about/Differentiators";
 import PersonalTouch from "@/components/about/PersonalTouch";
 import FinalCTA from "@/components/about/FinalCTA";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export const metadata: Metadata = {
   title: "About Moaz Haider – SEO Expert Driving Results Since 2015",
@@ -182,6 +183,9 @@ export default function AboutPage() {
 
         {/* Personal Touch */}
         <PersonalTouch />
+
+        {/* Free SEO Audit Form */}
+        <FreeAuditForm />
 
         {/* Final CTA */}
         <FinalCTA />

@@ -10,6 +10,7 @@ import WhatsIncluded from "@/components/service-detail/WhatsIncluded";
 import OptimizedWhyChoose from "@/components/service-detail/OptimizedWhyChoose";
 import ServiceFAQs from "@/components/service-detail/ServiceFAQs";
 import ServiceCTA from "@/components/service-detail/ServiceCTA";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export async function generateStaticParams() {
   return servicesList.map((slug) => ({
@@ -134,6 +135,9 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       
       {/* FAQ - Handle objections, SEO schema */}
       <ServiceFAQs service={service} />
+      
+      {/* Free SEO Audit Form */}
+      <FreeAuditForm />
       
       {/* Final CTA - Convert warmed leads */}
       <ServiceCTA serviceName={service.name} />

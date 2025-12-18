@@ -3,6 +3,7 @@ import CaseStudiesHero from "@/components/case-studies/CaseStudiesHero";
 import CaseStudiesGrid from "@/components/case-studies/CaseStudiesGrid";
 import RelatedServicesCTA from "@/components/case-studies/RelatedServicesCTA";
 import FinalCTA from "@/components/case-studies/FinalCTA";
+import FreeAuditForm from "@/components/FreeAuditForm";
 
 export const metadata: Metadata = {
   title: "SEO Case Studies – Real Results from Moaz Haider",
@@ -97,6 +98,9 @@ export default function CaseStudiesPage() {
 
         {/* Related Services CTA */}
         <RelatedServicesCTA />
+
+        {/* Free SEO Audit Form */}
+        <FreeAuditForm />
 
         {/* Final CTA */}
         <FinalCTA />
