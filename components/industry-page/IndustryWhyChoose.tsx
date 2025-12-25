@@ -29,7 +29,7 @@ export default function IndustryWhyChoose({ industry }: { industry: IndustryPage
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-slate-50 dark:from-slate-900 dark:via-purple-900/20 dark:to-slate-900">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -38,13 +38,13 @@ export default function IndustryWhyChoose({ industry }: { industry: IndustryPage
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">
             Why Choose Me for{" "}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-purple-600 dark:from-purple-400 to-pink-600 bg-clip-text text-transparent">
               {industry.name} SEO
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
             The advantages of working with an industry-focused SEO consultant
           </p>
         </motion.div>
@@ -57,15 +57,15 @@ export default function IndustryWhyChoose({ industry }: { industry: IndustryPage
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors"
+              className="backdrop-blur-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-8 hover:bg-slate-50 dark:hover:bg-white/10 transition-colors shadow-lg dark:shadow-none"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center mb-6">
                 <reason.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
                 {reason.title}
               </h3>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                 {reason.description}
               </p>
             </motion.div>
@@ -78,10 +78,10 @@ export default function IndustryWhyChoose({ industry }: { industry: IndustryPage
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-12 p-8 bg-white/5 border border-white/10 rounded-2xl"
+          className="text-center mt-12 p-8 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl shadow-lg dark:shadow-none"
         >
-          <p className="text-lg text-gray-300">
-            <strong className="text-white">No contracts, no retainers, no lock-ins.</strong> You stay because the results 
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            <strong className="text-slate-900 dark:text-white">No contracts, no retainers, no lock-ins.</strong> You stay because the results 
             are worth it—not because you're trapped in a long-term agreement.
           </p>
         </motion.div>
