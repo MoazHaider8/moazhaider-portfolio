@@ -44,9 +44,9 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
   };
 
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+    <section className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 dark:from-slate-900 dark:via-purple-900/20 dark:to-slate-900">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-grid-slate-900/[0.02] dark:bg-grid-white/[0.02] bg-[size:60px_60px]" />
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -57,20 +57,20 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
             transition={{ duration: 0.6 }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 mb-6">
-              <Icon className="w-4 h-4 text-purple-400" />
-              <span className="text-sm font-semibold text-purple-300">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 dark:border-purple-500/20 mb-6">
+              <Icon className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <span className="text-sm font-semibold text-purple-700 dark:text-purple-300">
                 {industry.badge}
               </span>
             </div>
 
             {/* H1 */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
               {industry.h1}
             </h1>
 
             {/* Positioning */}
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
               {industry.positioning}
             </p>
 
@@ -85,7 +85,7 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
               </a>
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-8 py-4 rounded-xl font-semibold text-white hover:bg-white/20 transition-all"
+                className="group inline-flex items-center justify-center gap-2 bg-slate-100 dark:bg-white/10 backdrop-blur-xl border border-slate-300 dark:border-white/20 px-8 py-4 rounded-xl font-semibold text-slate-900 dark:text-white hover:bg-slate-200 dark:hover:bg-white/20 transition-all"
               >
                 <Calendar className="w-5 h-5" />
                 Book a Strategy Call
@@ -93,18 +93,18 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
+            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-900/10 dark:border-white/10">
               <div>
-                <div className="text-2xl font-bold text-white mb-1">{industry.seoType === "local" ? "Local" : industry.seoType === "national" ? "National" : "Hybrid"}</div>
-                <div className="text-sm text-gray-400">SEO Focus</div>
+                <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{industry.seoType === "local" ? "Local" : industry.seoType === "national" ? "National" : "Hybrid"}</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">SEO Focus</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white mb-1">100%</div>
-                <div className="text-sm text-gray-400">White-Hat</div>
+                <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">100%</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">White-Hat</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white mb-1">Direct</div>
-                <div className="text-sm text-gray-400">Expert Access</div>
+                <div className="text-2xl font-bold text-slate-900 dark:text-white mb-1">Direct</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Expert Access</div>
               </div>
             </div>
           </motion.div>
@@ -114,12 +114,12 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8"
+            className="backdrop-blur-xl bg-white/90 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-8 shadow-xl dark:shadow-none"
           >
-            <h3 className="text-2xl font-bold text-white mb-2">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
               Get Your Free {industry.name} SEO Audit
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               See exactly how you rank vs. competitors in your area
             </p>
 
@@ -131,7 +131,7 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
@@ -139,9 +139,9 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
                   type="email"
                   placeholder="Your Email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
@@ -150,7 +150,7 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
                   placeholder="Your Website (if you have one)"
                   value={formData.website}
                   onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                  className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-white/5 border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
 
@@ -174,7 +174,7 @@ export default function IndustryHero({ industry }: { industry: IndustryPageData 
               )}
             </form>
 
-            <p className="text-xs text-gray-400 mt-4 text-center">
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-4 text-center">
               No spam. Unsubscribe anytime. I respect your inbox.
             </p>
           </motion.div>
