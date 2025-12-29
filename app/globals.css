@@ -91,6 +91,22 @@
   .gradient-text {
     @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent;
   }
+
+  /* PWA Install Prompt Animation */
+  .animate-slide-up {
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

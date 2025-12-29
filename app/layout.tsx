@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import InstallPrompt from "@/components/InstallPrompt";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Moaz Haider" }],
   creator: "Moaz Haider",
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -54,6 +56,14 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Moaz Haider",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
@@ -63,11 +73,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="theme-color" content="#8b5cf6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Moaz Haider" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <Header />
           <main>{children}</main>
           <Footer />
+          <InstallPrompt />
         </ThemeProvider>
       </body>
     </html>
