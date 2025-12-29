@@ -21,9 +21,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const industry = getIndustryData(params.slug);
+  const { slug } = await params;
+  const industry = getIndustryData(slug);
 
   if (!industry) {
     return {
@@ -37,7 +38,7 @@ export async function generateMetadata({
     openGraph: {
       title: industry.metaTitle,
       description: industry.metaDescription,
-      url: `https://moazhaider.com/industries/${params.slug}`,
+      url: `https://moazhaider.com/industries/${slug}`,
       siteName: "Moaz Haider - SEO Consultant",
       locale: "en_US",
       type: "website",
@@ -48,13 +49,14 @@ export async function generateMetadata({
       description: industry.metaDescription,
     },
     alternates: {
-      canonical: `https://moazhaider.com/industries/${params.slug}`,
+      canonical: `https://moazhaider.com/industries/${slug}`,
     },
   };
 }
 
-export default function IndustryPage({ params }: { params: { slug: string } }) {
-  const industry = getIndustryData(params.slug);
+export default async function IndustryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const industry = getIndustryData(slug);
 
   if (!industry) {
     notFound();
@@ -66,7 +68,7 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
     "@graph": [
       {
         "@type": "Service",
-        "@id": `https://moazhaider.com/industries/${params.slug}#service`,
+        "@id": `https://moazhaider.com/industries/${slug}#service`,
         "name": `${industry.name} SEO Services`,
         "description": industry.metaDescription,
         "provider": {
@@ -82,20 +84,20 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
       },
       {
         "@type": "WebPage",
-        "@id": `https://moazhaider.com/industries/${params.slug}#webpage`,
-        "url": `https://moazhaider.com/industries/${params.slug}`,
+        "@id": `https://moazhaider.com/industries/${slug}#webpage`,
+        "url": `https://moazhaider.com/industries/${slug}`,
         "name": industry.metaTitle,
         "description": industry.metaDescription,
         "isPartOf": {
           "@id": "https://moazhaider.com/#website",
         },
         "about": {
-          "@id": `https://moazhaider.com/industries/${params.slug}#service`,
+          "@id": `https://moazhaider.com/industries/${slug}#service`,
         },
       },
       {
         "@type": "BreadcrumbList",
-        "@id": `https://moazhaider.com/industries/${params.slug}#breadcrumb`,
+        "@id": `https://moazhaider.com/industries/${slug}#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -113,13 +115,13 @@ export default function IndustryPage({ params }: { params: { slug: string } }) {
             "@type": "ListItem",
             "position": 3,
             "name": industry.name,
-            "item": `https://moazhaider.com/industries/${params.slug}`,
+            "item": `https://moazhaider.com/industries/${slug}`,
           },
         ],
       },
       {
         "@type": "FAQPage",
-        "@id": `https://moazhaider.com/industries/${params.slug}#faq`,
+        "@id": `https://moazhaider.com/industries/${slug}#faq`,
         "mainEntity": industry.faqs.map((faq) => ({
           "@type": "Question",
           "name": faq.question,

@@ -29,9 +29,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const cmsData = getCMSData(params.slug);
+  const { slug } = await params;
+  const cmsData = getCMSData(slug);
   
   if (!cmsData) {
     return {
@@ -43,16 +44,16 @@ export async function generateMetadata({
     title: `${cmsData.name} SEO Services | ${cmsData.metaTitle} | Moaz Haider`,
     description: cmsData.metaDescription,
     alternates: {
-      canonical: `https://moazhaider.com/cms/${params.slug}`,
+      canonical: `https://moazhaider.com/cms/${slug}`,
     },
     openGraph: {
       title: `${cmsData.name} SEO Services | Platform-Specific Optimization`,
       description: cmsData.metaDescription,
-      url: `https://moazhaider.com/cms/${params.slug}`,
+      url: `https://moazhaider.com/cms/${slug}`,
       siteName: "Moaz Haider SEO",
       images: [
         {
-          url: `https://moazhaider.com/og-${params.slug}.jpg`,
+          url: `https://moazhaider.com/og-${slug}.jpg`,
           width: 1200,
           height: 600,
           alt: `${cmsData.name} SEO Services`,
@@ -63,8 +64,9 @@ export async function generateMetadata({
   };
 }
 
-export default function CMSSubpage({ params }: { params: { slug: string } }) {
-  const cmsData = getCMSData(params.slug);
+export default async function CMSSubpage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const cmsData = getCMSData(slug);
 
   if (!cmsData) {
     notFound();
@@ -105,7 +107,7 @@ export default function CMSSubpage({ params }: { params: { slug: string } }) {
         "@type": "ListItem",
         position: 3,
         name: `${cmsData.name} SEO`,
-        item: `https://moazhaider.com/cms/${params.slug}`,
+        item: `https://moazhaider.com/cms/${slug}`,
       },
     ],
   };

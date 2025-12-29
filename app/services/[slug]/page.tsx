@@ -18,8 +18,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const service = servicesData[params.slug];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = servicesData[slug];
   
   if (!service) {
     return {
@@ -39,8 +40,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
-  const service = servicesData[params.slug];
+export default async function ServiceDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = servicesData[slug];
 
   if (!service) {
     notFound();
