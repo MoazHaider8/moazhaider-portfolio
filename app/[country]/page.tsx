@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getCountryData, getAllCountrySlugs } from "@/lib/countryData";
 import { CheckCircle, Globe, TrendingUp, Users, Award, BookOpen } from "lucide-react";
+import { use } from "react";
 
 export async function generateStaticParams() {
   const slugs = getAllCountrySlugs();

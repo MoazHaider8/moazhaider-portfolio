@@ -11,7 +11,7 @@ const pwaConfig = withPWA({
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true,
   swcMinify: true,
-  disable: false, // Set to true for development if needed
+  disable: process.env.NODE_ENV === 'development', // Disable in development
   workboxOptions: {
     disableDevLogs: true,
     // Network-first strategy for HTML pages to avoid serving stale content
