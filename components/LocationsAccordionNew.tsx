@@ -180,7 +180,7 @@ export default function LocationsAccordion() {
                 {/* Hover indicator */}
                 <div className="pt-4 border-t border-gray-200 dark:border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-xs font-semibold text-cyan-600 dark:text-cyan-400">
-                    View Local SEO Services →
+                    View Ecommerce SEO Services →
                   </span>
                 </div>
               </div>
