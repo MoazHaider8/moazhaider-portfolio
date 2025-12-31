@@ -34,10 +34,18 @@ export default function Footer() {
   ];
 
   const locationLinks = [
-    { name: "United States", href: "/locations/united-states" },
-    { name: "United Kingdom", href: "/locations/united-kingdom" },
-    { name: "Canada", href: "/locations/canada" },
-    { name: "Australia", href: "/locations/australia" },
+    { name: "United States", href: "/united-states" },
+    { name: "United Kingdom", href: "/united-kingdom" },
+    { name: "Canada", href: "/canada" },
+    { name: "Australia", href: "/australia" },
+    { name: "India", href: "/india" },
+    { name: "Germany", href: "/germany" },
+    { name: "France", href: "/france" },
+    { name: "Italy", href: "/italy" },
+    { name: "Spain", href: "/spain" },
+    { name: "Netherlands", href: "/netherlands" },
+    { name: "UAE", href: "/uae" },
+    { name: "Singapore", href: "/singapore" },
   ];
 
   return (

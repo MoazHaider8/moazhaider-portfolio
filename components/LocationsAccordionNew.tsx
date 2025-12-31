@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Globe, MapPin } from "lucide-react";
+import Link from "next/link";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -22,72 +23,84 @@ const countries = [
   { 
     code: "US", 
     name: "United States",
+    slug: "united-states",
     flagGradient: "from-blue-700 via-white to-red-600",
     cities: "New York, Los Angeles, Chicago, Houston"
   },
   { 
     code: "GB", 
     name: "United Kingdom",
+    slug: "united-kingdom",
     flagGradient: "from-blue-800 via-white to-red-700",
     cities: "London, Manchester, Birmingham"
   },
   { 
     code: "CA", 
     name: "Canada",
+    slug: "canada",
     flagGradient: "from-red-600 via-white to-red-600",
     cities: "Toronto, Vancouver, Montreal"
   },
   { 
     code: "AU", 
     name: "Australia",
+    slug: "australia",
     flagGradient: "from-blue-700 via-white to-blue-700",
     cities: "Sydney, Melbourne, Brisbane"
   },
   { 
     code: "IN", 
     name: "India",
+    slug: "india",
     flagGradient: "from-orange-500 via-white to-green-600",
     cities: "Mumbai, Delhi, Bangalore"
   },
   { 
     code: "DE", 
     name: "Germany",
+    slug: "germany",
     flagGradient: "from-gray-900 via-red-600 to-yellow-400",
     cities: "Berlin, Munich, Hamburg"
   },
   { 
     code: "FR", 
     name: "France",
+    slug: "france",
     flagGradient: "from-blue-700 via-white to-red-600",
     cities: "Paris, Lyon, Marseille"
   },
   { 
     code: "IT", 
     name: "Italy",
+    slug: "italy",
     flagGradient: "from-green-600 via-white to-red-600",
     cities: "Rome, Milan, Naples"
   },
   { 
     code: "ES", 
     name: "Spain",
+    slug: "spain",
     flagGradient: "from-red-600 via-yellow-400 to-red-600",
     cities: "Madrid, Barcelona, Valencia"
   },
   { 
     code: "NL", 
     name: "Netherlands",
+    slug: "netherlands",
     flagGradient: "from-red-600 via-white to-blue-700",
     cities: "Amsterdam, Rotterdam, The Hague"
   },
   { 
     code: "AE", 
     name: "UAE",
+    slug: "uae",
     flagGradient: "from-green-600 via-white to-gray-900",
     cities: "Dubai, Abu Dhabi, Sharjah"
   },
   { 
     code: "SG", 
     name: "Singapore",
+    slug: "singapore",
     flagGradient: "from-red-600 via-white to-red-600",
     cities: "Singapore City"
   }
@@ -141,7 +154,8 @@ export default function LocationsAccordion() {
               }}
               className="group cursor-pointer"
             >
-              <div className="glass-card rounded-2xl p-6 h-full hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+              <Link href={`/${country.slug}`} className="block">
+                <div className="glass-card rounded-2xl p-6 h-full hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
                 {/* Header with Flag and Country */}
                 <div className="flex items-start gap-3 mb-4">
                   <motion.div
@@ -170,6 +184,7 @@ export default function LocationsAccordion() {
                   </span>
                 </div>
               </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

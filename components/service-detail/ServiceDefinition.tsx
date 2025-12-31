@@ -157,7 +157,7 @@ export default function ServiceDefinition({ service }: Props) {
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white">Availability</h4>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Serving clients <span className="font-semibold text-gray-900 dark:text-white">worldwide</span>, with primary markets in US, UK, Canada, and Australia
+                  Serving clients <span className="font-semibold text-gray-900 dark:text-white">worldwide</span>, with primary markets in <Link href="/united-states" className="text-green-600 dark:text-green-400 hover:underline font-semibold">US</Link>, <Link href="/united-kingdom" className="text-green-600 dark:text-green-400 hover:underline font-semibold">UK</Link>, <Link href="/canada" className="text-green-600 dark:text-green-400 hover:underline font-semibold">Canada</Link>, and <Link href="/australia" className="text-green-600 dark:text-green-400 hover:underline font-semibold">Australia</Link>
                 </p>
               </div>
             </motion.div>

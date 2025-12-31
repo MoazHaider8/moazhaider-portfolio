@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function IndustriesLocations() {
   return (
@@ -28,7 +29,7 @@ export default function IndustriesLocations() {
             Home services need city-level targeting. SaaS needs global reach. Professional services often need both.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-200">
-            I work with businesses across the United States, United Kingdom, Canada, Australia, and internationally. 
+            I work with businesses across the <Link href="/united-states" className="text-purple-600 dark:text-purple-400 hover:underline font-semibold">United States</Link>, <Link href="/united-kingdom" className="text-purple-600 dark:text-purple-400 hover:underline font-semibold">United Kingdom</Link>, <Link href="/canada" className="text-purple-600 dark:text-purple-400 hover:underline font-semibold">Canada</Link>, <Link href="/australia" className="text-purple-600 dark:text-purple-400 hover:underline font-semibold">Australia</Link>, and internationally. 
             Your industry determines the geographic strategy—not arbitrary limitations.
           </p>
         </motion.div>

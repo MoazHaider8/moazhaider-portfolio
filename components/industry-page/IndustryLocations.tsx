@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Globe } from "lucide-react";
 import { IndustryPageData } from "@/lib/industryData";
+import Link from "next/link";
 
 export default function IndustryLocations({ industry }: { industry: IndustryPageData }) {
   return (
@@ -77,7 +78,10 @@ export default function IndustryLocations({ industry }: { industry: IndustryPage
         >
           <p className="text-gray-700 dark:text-gray-300">
             I work with {industry.name.toLowerCase()} businesses across the{" "}
-            <strong>United States, United Kingdom, Canada, Australia, and internationally</strong>. 
+            <Link href="/united-states" className="font-semibold text-purple-600 dark:text-purple-400 hover:underline">United States</Link>,{" "}
+            <Link href="/united-kingdom" className="font-semibold text-purple-600 dark:text-purple-400 hover:underline">United Kingdom</Link>,{" "}
+            <Link href="/canada" className="font-semibold text-purple-600 dark:text-purple-400 hover:underline">Canada</Link>,{" "}
+            <Link href="/australia" className="font-semibold text-purple-600 dark:text-purple-400 hover:underline">Australia</Link>, and internationally. 
             Your service area determines the geographic strategy—not arbitrary limitations.
           </p>
         </motion.div>
