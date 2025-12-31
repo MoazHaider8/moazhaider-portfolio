@@ -191,51 +191,43 @@ export default function CountryPageClient({ data, country }: { data: any; countr
             className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-purple-100 dark:border-purple-800">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                  <TrendingUp className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Market Size</p>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{data.marketOverview.marketSize.split(',')[0]}</h3>
-                </div>
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <TrendingUp className="w-7 h-7 text-white" />
               </div>
+              <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-2">Market Size</p>
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+                {data.marketOverview.marketSize.includes('$') 
+                  ? data.marketOverview.marketSize.split('annually')[0].trim() + ' annually'
+                  : data.marketOverview.marketSize.split('.')[0]}
+              </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 {data.marketOverview.growthRate || data.marketOverview.growthTrends.split('.')[0]}
               </p>
             </motion.div>
 
             <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-cyan-100 dark:border-cyan-800">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                  <Target className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-1">Top Platforms</p>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2">
-                    {Array.isArray(data.marketOverview.dominantPlatforms) 
-                      ? data.marketOverview.dominantPlatforms.slice(0, 3).join(", ") 
-                      : data.marketOverview.dominantPlatforms}
-                  </h3>
-                </div>
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <Target className="w-7 h-7 text-white" />
               </div>
+              <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-2">Top Platforms</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 min-h-[56px]">
+                {Array.isArray(data.marketOverview.dominantPlatforms) 
+                  ? data.marketOverview.dominantPlatforms.slice(0, 3).join(", ") 
+                  : data.marketOverview.dominantPlatforms}
+              </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 Leading ecommerce platforms in the market
               </p>
             </motion.div>
 
             <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-green-100 dark:border-green-800 sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
-                  <Users className="w-7 h-7 text-white" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-1">Consumer Behavior</p>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2">
-                    {data.marketOverview.consumerBehavior.split('.')[0].substring(0, 80)}...
-                  </h3>
-                </div>
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <Users className="w-7 h-7 text-white" />
               </div>
+              <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-2">Consumer Behavior</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 min-h-[56px]">
+                {data.marketOverview.consumerBehavior.split('.')[0].substring(0, 70)}...
+              </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 Key shopping trends and preferences
               </p>
