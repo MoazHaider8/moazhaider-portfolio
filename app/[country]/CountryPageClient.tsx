@@ -172,43 +172,73 @@ export default function CountryPageClient({ data, country }: { data: any; countr
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            variants={fadeIn}
+            className="text-center mb-12"
           >
-            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <ShoppingCart className="w-6 h-6 text-white" />
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+              {data.name} <span className="gradient-text">Ecommerce Market</span>
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Key insights into the ecommerce landscape and opportunities
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-purple-100 dark:border-purple-800">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Market Size</p>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{data.marketOverview.marketSize.split(',')[0]}</h3>
+                </div>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{data.marketOverview.marketSize}</h3>
-              <p className="text-gray-600 dark:text-gray-400">Market Size</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                {data.marketOverview.growthRate || data.marketOverview.growthTrends.split('.')[0]}
+              </p>
             </motion.div>
 
-            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Zap className="w-6 h-6 text-white" />
+            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-cyan-100 dark:border-cyan-800">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <Target className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-cyan-600 dark:text-cyan-400 mb-1">Top Platforms</p>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2">
+                    {Array.isArray(data.marketOverview.dominantPlatforms) 
+                      ? data.marketOverview.dominantPlatforms.slice(0, 3).join(", ") 
+                      : data.marketOverview.dominantPlatforms}
+                  </h3>
+                </div>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{data.marketOverview.growthRate || data.marketOverview.growthTrends}</h3>
-              <p className="text-gray-600 dark:text-gray-400">Annual Growth</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Leading ecommerce platforms in the market
+              </p>
             </motion.div>
 
-            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Target className="w-6 h-6 text-white" />
+            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group border border-green-100 dark:border-green-800 sm:col-span-2 lg:col-span-1">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-1">Consumer Behavior</p>
+                  <h3 className="text-base font-bold text-gray-900 dark:text-white line-clamp-2">
+                    {data.marketOverview.consumerBehavior.split('.')[0].substring(0, 80)}...
+                  </h3>
+                </div>
               </div>
-              <h3 className="text-base font-bold text-gray-900 dark:text-white mb-2">
-                {Array.isArray(data.marketOverview.dominantPlatforms) 
-                  ? data.marketOverview.dominantPlatforms.join(", ") 
-                  : data.marketOverview.dominantPlatforms}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">Top Platforms</p>
-            </motion.div>
-
-            <motion.div variants={scaleIn} className="glass-card rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Users className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">{data.marketOverview.consumerBehavior}</h3>
-              <p className="text-gray-600 dark:text-gray-400">Consumer Trend</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Key shopping trends and preferences
+              </p>
             </motion.div>
           </motion.div>
         </div>
@@ -426,7 +456,7 @@ export default function CountryPageClient({ data, country }: { data: any; countr
 
       {/* FAQs */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -444,19 +474,23 @@ export default function CountryPageClient({ data, country }: { data: any; countr
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
-            className="space-y-4"
+            className="grid md:grid-cols-2 gap-6"
           >
             {data.faqs.map((faq: any, index: number) => (
               <motion.div
                 key={index}
                 variants={fadeIn}
-                className="glass-card rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                className="glass-card rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-purple-100 dark:border-purple-800"
               >
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-purple-600 dark:text-purple-400 flex-shrink-0 mt-0.5" />
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 pl-9">
+                <div className="flex items-start gap-3 mb-3">
+                  <span className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0">
+                    {index + 1}
+                  </span>
+                  <h3 className="text-base font-semibold text-gray-900 dark:text-white leading-snug">
+                    {faq.question}
+                  </h3>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                   {faq.answer}
                 </p>
               </motion.div>
