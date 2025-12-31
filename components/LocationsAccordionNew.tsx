@@ -129,10 +129,10 @@ export default function LocationsAccordion() {
           </motion.div>
           
           <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Select Your <span className="gradient-text">Country</span> for Local SEO Services
+            Select Your <span className="gradient-text">Country</span> for Ecommerce SEO Services
           </motion.h2>
           <motion.p variants={fadeUp} className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-            I provide expert local SEO services and search engine optimization across major countries worldwide. My SEO consultant helps businesses improve Google rankings and drive organic traffic in your target markets
+            I provide expert ecommerce SEO services and search engine optimization across major countries worldwide. My SEO consultant helps ecommerce businesses improve Google rankings and drive organic traffic in your target markets
           </motion.p>
         </motion.div>
 
